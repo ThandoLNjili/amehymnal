@@ -1,0 +1,685 @@
+/* =========================================
+   1. VARIABLES & THEME SETUP (AME EDITION)
+   ========================================= */
+:root {
+    --bg-color: #fdfbf7;        /* Warm paper-like background */
+    --text-color: #2c2c2c;      /* Dark gray for readability */
+    
+    /* AME BRAND COLORS */
+    --accent-color: #4b0082;    /* Episcopal Royal Purple (Indigo) */
+    --highlight-gold: #daa520;  /* Goldenrod - typical for AME trim */
+    
+    --rubric-color: #555555;    /* Gray for instructions */
+    --nav-bg: #ffffff;
+    --border-color: #dddddd;
+    
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --base-font-size: 18px;
+    --line-height: 1.6;
+}
+
+/* Dark Mode Overrides */
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    
+    /* Lighter Purple for readability on dark screens */
+    --accent-color: #bb86fc;    
+    --highlight-gold: #ffd700;  /* Brighter Gold */
+    
+    --rubric-color: #aaaaaa;
+    --nav-bg: #1e1e1e;
+    --border-color: #333333;
+}
+
+/* Large Font Mode Override */
+body.large-font {
+    --base-font-size: 24px;
+}
+
+/* =========================================
+   2. BASE STYLES
+   ========================================= */
+body {
+    font-family: var(--font-serif);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: var(--base-font-size);
+    line-height: var(--line-height);
+    margin: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.page-container {
+    max-width: 800px;       
+    margin: 0 auto;         
+    padding: 24px;          
+    padding-bottom: 120px;  /* Space for bottom controls */
+    box-sizing: border-box;
+    text-align: center;     /* Global Centering for Liturgy */
+}
+
+/* =========================================
+   3. TYPOGRAPHY & LITURGY
+   ========================================= */
+.heading-1 {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 0.5em 0;
+    color: var(--accent-color);
+    text-transform: uppercase;
+}
+
+.heading-2 {
+    font-weight: bold;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    margin: 1.5em 0 1em 0;
+    letter-spacing: 1px;
+}
+
+.heading-3 {
+    font-weight: bold;
+    font-size: 1em;
+    margin: 1.5em 0 0.5em 0;
+    text-transform: uppercase;
+}
+
+/* Rubrics: Instructions (Italics) */
+.rubric {
+    font-style: italic;
+    color: var(--rubric-color);
+    margin: 1.2em 0;
+    font-size: 0.95em;
+    line-height: 1.5;
+    /* Essential: Respects new lines (\n) in JSON text */
+    white-space: pre-line; 
+}
+
+.text-block {
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.responsive-reading {
+    display: block; 
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.verse-num {
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-right: 8px; 
+    display: inline;
+}
+
+/* =========================================
+   4. HYMN STYLING (NEW DESIGN)
+   ========================================= */
+/* The Container for Number & Meter */
+.hymn-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5em 0 1em 0;
+}
+
+/* Big Hymn Number */
+.hymn-number {
+    font-size: 2.8em;       
+    font-weight: bold;
+    color: var(--accent-color);
+    line-height: 1;
+}
+
+/* Small Key/Meter below it */
+.hymn-meter {
+    font-size: 0.9em;       
+    font-weight: normal;
+    color: var(--rubric-color);
+    margin-top: 5px;        
+    letter-spacing: 2px;    
+    text-transform: uppercase;
+}
+
+/* Centered Poem Layout */
+.stanza {
+    margin: 2em auto;
+    text-align: center;     
+    line-height: 1.6;
+    max-width: 600px;       
+}
+
+.stanza p {
+    margin: 0.5em 0;
+}
+
+/* =========================================
+   5. NAVIGATION & TABLE OF CONTENTS
+   ========================================= */
+.toc-row {
+    display: flex;
+    align-items: flex-end; 
+    margin-bottom: 0.8em;
+    cursor: pointer;
+    padding: 5px 0;
+    text-align: left; /* Keep Index left-aligned for readability */
+}
+
+.toc-row:hover {
+    background-color: rgba(0,0,0,0.05);
+}
+
+.toc-num {
+    font-weight: bold;
+    min-width: 30px;
+    text-align: left;
+}
+
+.toc-text {
+    flex-grow: 1; 
+    font-weight: bold;
+    text-align: left;
+}
+
+.toc-dots {
+    flex-grow: 1;
+    border-bottom: 2px dotted var(--rubric-color);
+    margin: 0 5px 5px 5px; 
+    opacity: 0.5;
+}
+
+.toc-page {
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+/* =========================================
+   6. UI CONTROLS (NAVBAR & SEARCH)
+   ========================================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 24px;
+    background-color: var(--nav-bg);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.amec-logo {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    filter: brightness(0.8) contrast(1.1);
+    transition: filter 0.2s ease, transform 0.2s ease;
+    border-radius: 4px;
+}
+
+.amec-logo:hover {
+    filter: brightness(1) contrast(1.1);
+    transform: scale(1.05);
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.1em;
+    font-family: sans-serif;
+}
+
+.nav-right button {
+    background: none;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 5px 10px;
+    margin-left: 5px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+/* Search Bar Container */
+.search-container {
+    padding: 15px 24px;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative; /* Anchor for dropdown */
+}
+
+#search-input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--nav-bg);
+    color: var(--text-color);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Search Dropdown Results */
+#search-results {
+    position: absolute;
+    top: 100%;
+    left: 15px;
+    right: 15px;
+    background: var(--nav-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 1000;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.search-option {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-option:last-child {
+    border-bottom: none;
+}
+
+.search-option:hover {
+    background-color: rgba(0,0,0,0.05);
+}
+
+.offline-indicator {
+    background-color: #ff6b35;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.75em;
+    font-weight: bold;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+/* Dark mode adjustments */
+.dark-mode .amec-logo {
+    filter: brightness(1.2) contrast(1.3) invert(0.1);
+}
+
+.dark-mode .amec-logo:hover {
+    filter: brightness(1.4) contrast(1.3) invert(0.1);
+}
+
+.search-label {
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.search-detail {
+    color: var(--rubric-color);
+    font-size: 0.9em;
+}
+
+/* Update Banner */
+.update-banner {
+    background: linear-gradient(135deg, var(--accent-color), var(--highlight-gold));
+    color: white;
+    padding: 12px 24px;
+    position: sticky;
+    top: 0;
+    z-index: 1001; /* Above navbar */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    animation: slideDown 0.5s ease-out;
+}
+
+.update-banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+.update-icon {
+    font-size: 1.2em;
+    animation: spin 2s linear infinite;
+}
+
+.update-message {
+    flex: 1;
+    font-weight: 500;
+    font-size: 0.95em;
+}
+
+.update-button {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.9em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.update-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+}
+
+.dismiss-button {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.5em;
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.dismiss-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Bottom Controls */
+.page-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 24px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--nav-bg);
+    border-top: 1px solid var(--border-color);
+    box-sizing: border-box;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+.page-controls button {
+    padding: 12px 24px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    min-width: 80px;
+}
+
+.page-controls button:active {
+    opacity: 0.9;
+}
+
+#current-page-display {
+    font-family: sans-serif;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.hidden {
+    display: none !important;
+}
+
+@media (max-width: 360px) {
+    .page-container {
+        padding: 16px; 
+    }
+
+    .amec-logo {
+        height: 32px;
+    }
+
+    .logo {
+        font-size: 1em;
+    }
+
+    .nav-left {
+        gap: 8px;
+    }
+}
+
+.search-highlight {
+    color: var(--accent-color);
+    font-weight: bold;
+    background-color: rgba(255, 255, 0, 0.2); /* Subtle yellow highlight */
+    border-radius: 3px;
+    padding: 0 2px;
+}
+
+.search-option {
+    /* Ensure long lines don't break the layout */
+    display: flex;
+    flex-direction: column; /* Stack Title and Lyric */
+    align-items: flex-start;
+    gap: 4px;
+}
+
+/* =========================================
+   8. NEW DASHBOARD FOOTER
+   ========================================= */
+
+#app-footer {
+    background-color: var(--nav-bg);
+    border-top: 1px solid var(--border-color);
+    padding: 10px 20px;
+    position: fixed; /* Fix to bottom of screen */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.08);
+    box-sizing: border-box;
+    
+    /* Mobile First Layout: Stacked */
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+}
+
+/* Shortcuts (Imibhedesho | Amaculo) */
+.nav-shortcuts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-link {
+    background: none;
+    border: none;
+    color: var(--accent-color);
+    cursor: pointer;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: sans-serif;
+}
+
+.nav-link:hover {
+    background-color: rgba(0,0,0,0.05);
+    border-radius: 4px;
+}
+
+.divider {
+    color: var(--border-color);
+}
+
+/* Pagination Row */
+.pagination-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    min-width: 90px;
+    transition: opacity 0.2s;
+}
+
+.btn-primary:active {
+    opacity: 0.8;
+}
+
+.page-display {
+    font-weight: bold;
+    color: var(--text-color);
+    font-family: sans-serif;
+}
+
+/* --- DESKTOP TWEAKS (Single Row) --- */
+@media (min-width: 768px) {
+    #app-footer {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        padding: 15px 40px;
+    }
+
+    .pagination-controls {
+        display: contents; /* Ungroups the div so buttons align to grid */
+    }
+
+    /* Place Prev button on far left */
+    #prev-page { grid-column: 1; justify-self: start; }
+
+    /* Place Next button on far right */
+    #next-page { grid-column: 3; justify-self: end; }
+    
+    /* Place Shortcuts in center */
+    .nav-shortcuts {
+        grid-column: 2;
+        gap: 20px;
+    }
+}
+
+/* Offline Message */
+.offline-message {
+    text-align: center;
+    margin-top: 40px;
+    padding: 30px;
+    background: var(--nav-bg);
+    border-radius: 12px;
+    border: 2px solid var(--border-color);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.offline-message h2 {
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.offline-message p {
+    margin-bottom: 20px;
+    color: var(--rubric-color);
+    line-height: 1.6;
+}
+
+/* Loading Indicator */
+.loading-indicator {
+    text-align: center;
+    margin-top: 40px;
+    padding: 30px;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid var(--border-color);
+    border-top: 4px solid var(--accent-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+.loading-indicator p {
+    color: var(--rubric-color);
+    font-style: italic;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Page Not Found */
+.page-not-found {
+    text-align: center;
+    margin-top: 40px;
+    padding: 30px;
+    background: var(--nav-bg);
+    border-radius: 12px;
+    border: 2px solid var(--border-color);
+}
+
+.page-not-found p {
+    margin-bottom: 10px;
+    color: var(--rubric-color);
+}
+
+/* Medium screens */
+@media (max-width: 480px) {
+    .amec-logo {
+        height: 35px;
+    }
+
+    .logo {
+        font-size: 1.05em;
+    }
+}

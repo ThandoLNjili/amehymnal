@@ -1,0 +1,53 @@
+{
+  "name": "AMEC Word Hymnal",
+  "short_name": "AMEC Hymnal",
+  "description": "A comprehensive offline-capable hymn reader for AMEC liturgy and worship",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2b5a88",
+  "orientation": "portrait",
+  "scope": "./",
+  "categories": ["books", "lifestyle", "music"],
+  "lang": "en",
+  "icons": [
+  {
+    "src": "icons/amec-logo-192.png",
+    "sizes": "192x192",
+    "type": "image/png",
+    "purpose": "any"
+  },
+  {
+    "src": "icons/amec-logo-512.png",
+    "sizes": "512x512",
+    "type": "image/png",
+    "purpose": "any"
+  }
+],
+  "shortcuts": [
+    {
+      "name": "Table of Contents",
+      "short_name": "TOC",
+      "description": "Go to the table of contents",
+      "url": "./index.html?page=3",
+      "icons": [
+        {
+          "src": "icons/ame-logo.svg",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Search Hymns",
+      "short_name": "Search",
+      "description": "Search for hymns and liturgy",
+      "url": "./index.html#search",
+      "icons": [
+        {
+          "src": "icons/ame-logo.svg",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+}
