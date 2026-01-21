@@ -1,6 +1,6 @@
-const CACHE_NAME = 'amec-hymnal-v16'; // Updated version to force cache refresh
-const STATIC_CACHE = 'amec-hymnal-static-v16';
-const DATA_CACHE = 'amec-hymnal-data-v16';
+const CACHE_NAME = 'amec-hymnal-v17'; // Version to force cache refresh
+const STATIC_CACHE = 'amec-hymnal-static-v17';
+const DATA_CACHE = 'amec-hymnal-data-v17';
 
 const STATIC_ASSETS = [
     './',

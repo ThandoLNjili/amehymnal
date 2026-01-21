@@ -3,14 +3,12 @@
 /**
  * AMEC Hymnal Build Script
  * Minifies CSS and JS for production deployment
- *
- * Usage: node build.js
- */
+// AMEC Hymnal Build Script
 
 const fs = require('fs');
 const path = require('path');
 
-// Simple minification functions (for basic use - consider using proper minifiers for production)
+// Simple minification functions (for basic use)
 function minifyCSS(css) {
     return css
         .replace(/\/\*[\s\S]*?\*\//g, '') // Remove comments

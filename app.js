@@ -1,9 +1,7 @@
-// =========================================
-// 1. INITIALIZATION & STATE
-// =========================================
+// Initialization & State
 let hymnalData = [];
 let currentPage = 3; // Start at the Table of Contents
-let maxPage = 0;     // <--- NEW: Track the last available page
+let maxPage = 0;
 
 // Load saved page preference
 const savedPage = localStorage.getItem('amec-hymnal-current-page');
@@ -22,7 +20,7 @@ fetch('hymnal_data.json')
     .then(data => {
         hymnalData = data;
 
-        // <--- NEW: Calculate the highest page number in the file
+        // Calculate the highest page number in the file
         if (hymnalData.length > 0) {
             maxPage = Math.max(...hymnalData.map(p => p.page));
         }
@@ -85,9 +83,7 @@ function refreshApp() {
 }
 
 
-// =========================================
-// 2. HELPER FUNCTIONS
-// =========================================
+// Helper Functions
 
 // Find which physical page a specific Hymn Number is located on
 function getPageFromHymnNumber(hymnNum) {
@@ -400,9 +396,7 @@ function performSearch() {
     }
 }
 
-// =========================================
 // Close search when clicking outside
-// =========================================
 document.addEventListener('click', (e) => {
     // Check if the clicked element is NOT inside the search container
     if (!e.target.closest('.search-container')) {
@@ -410,9 +404,7 @@ document.addEventListener('click', (e) => {
     }
 });
 
-// =========================================
 // Keyboard navigation for search results
-// =========================================
 let selectedResultIndex = -1;
 
 searchInput.addEventListener('keydown', (e) => {
@@ -453,7 +445,7 @@ document.getElementById('prev-page').addEventListener('click', () => {
     }
 });
 
-// <--- NEW: Updated Next Button Logic to check maxPage
+// Next Button Logic checks maxPage
 document.getElementById('next-page').addEventListener('click', () => {
     if (currentPage < maxPage) {
         currentPage++;
@@ -466,9 +458,7 @@ document.getElementById('next-page').addEventListener('click', () => {
 });
 
 
-// =========================================
-// 6. SETTINGS (Theme & Font)
-// =========================================
+// Settings (Theme & Font)
 document.getElementById('theme-toggle').addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
     saveThemePreference(); // Save the preference
@@ -480,9 +470,7 @@ document.getElementById('font-toggle').addEventListener('click', () => {
 });
 
 
-// =========================================
-// 7. SWIPE GESTURE LOGIC (Mobile)
-// =========================================
+// Swipe Gesture Logic (Mobile)
 let touchStartX = 0;
 let touchStartY = 0;
 let touchStartTime = 0;
@@ -490,7 +478,7 @@ let touchEndX = 0;
 let touchEndY = 0;
 let touchEndTime = 0;
 
-// Improved swipe thresholds
+// Swipe thresholds
 const minSwipeDistance = 80; // Increased from 50 for less sensitivity
 const maxVerticalMovement = 100; // Prevent diagonal swipes
 const maxSwipeTime = 500; // Maximum time for a valid swipe (ms)
@@ -662,9 +650,7 @@ function handleSwipe() {
     touchEndTime = 0;
 }
 
-// =========================================
-// 8. SERVICE WORKER REGISTRATION
-// =========================================
+// Service Worker Registration
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
         navigator.serviceWorker.register('./sw.js')
@@ -693,9 +679,7 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-// =========================================
-// 9. OFFLINE DETECTION & INDICATOR
-// =========================================
+// Offline Detection & Indicator
 // function updateOnlineStatus() {
 //     const offlineIndicator = document.getElementById('offline-indicator');
 //     if (navigator.onLine) {
@@ -714,9 +698,7 @@ if ('serviceWorker' in navigator) {
 // Check initial status
 // updateOnlineStatus();
 
-// =========================================
-// 10. THEME PERSISTENCE
-// =========================================
+// Theme Persistence
 function loadThemePreference() {
     const savedTheme = localStorage.getItem('amec-hymnal-theme');
     if (savedTheme === 'dark') {
@@ -745,9 +727,7 @@ function saveFontPreference() {
     localStorage.setItem('amec-hymnal-font', isLargeFont ? 'large' : 'normal');
 }
 
-// =========================================
-// 10. KEYBOARD SHORTCUTS
-// =========================================
+// Keyboard Shortcuts
 document.addEventListener('keydown', (e) => {
     // Ignore if user is typing in an input field
     if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
@@ -785,9 +765,7 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// =========================================
-// 11. LOAD PREFERENCES
-// =========================================
+// Load Preferences
 
 // Load preferences on app start
 loadThemePreference();

@@ -1,3 +1,4 @@
+
 # AMEC Hymnal PWA
 
 A Progressive Web App for reading AMEC hymns and liturgy, designed to work completely offline after initial installation.
