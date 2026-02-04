@@ -87,73 +87,43 @@
             {
                 "type": "toc-row",
                 "number": "3.",
-                "text": "Gloria Patri",
-                "target": 6
-            },
-            {
-                "type": "toc-row",
-                "number": "4.",
-                "text": "The Lord’s Prayer & Apostles’ Creed",
+                "text": "The Lord's Prayer & Apostles' Creed",
                 "target": 7
             },
             {
                 "type": "toc-row",
-                "number": "5.",
+                "number": "4.",
                 "text": "Te Deum",
                 "target": 7
             },
             {
                 "type": "toc-row",
-                "number": "6.",
-                "text": "Te Deum (continued)",
-                "target": 8
-            },
-            {
-                "type": "toc-row",
-                "number": "7.",
+                "number": "5.",
                 "text": "Litany",
                 "target": 9
             },
             {
                 "type": "toc-row",
-                "number": "8.",
-                "text": "Litany (continued)",
-                "target": 10
-            },
-            {
-                "type": "toc-row",
-                "number": "9.",
-                "text": "The Lord’s Supper / Holy Communion (Scriptures)",
+                "number": "6.",
+                "text": "The Lord's Supper / Holy Communion (Scriptures)",
                 "target": 11
             },
             {
                 "type": "toc-row",
-                "number": "10.",
-                "text": "Holy Communion Scriptures (continued)",
-                "target": 12
-            },
-            {
-                "type": "toc-row",
-                "number": "11.",
+                "number": "7.",
                 "text": "Invitation & General Confession",
                 "target": 13
             },
             {
                 "type": "toc-row",
-                "number": "12.",
-                "text": "Second Collect / Adoration / Humiliation",
-                "target": 14
-            },
-            {
-                "type": "toc-row",
-                "number": "13.",
+                "number": "8.",
                 "text": "Prayer of Consecration",
                 "target": 15
             },
             {
                 "type": "toc-row",
-                "number": "14.",
-                "text": "The Lord’s Prayer & Prayer of Thanksgiving",
+                "number": "9.",
+                "text": "The Lord's Prayer & Prayer of Thanksgiving",
                 "target": 16
             }
         ]
