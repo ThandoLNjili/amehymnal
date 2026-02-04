@@ -48,6 +48,7 @@ function loadLanguage(langCode) {
             hymnalData = data;
             maxPage = Math.max(...hymnalData.map(p => p.page));
 
+            updateFooterShortcuts(langCode);
             currentPage = 1; // ALWAYS start at Dedication
             renderPage(currentPage);
         })
@@ -814,7 +815,44 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// Load Preferences
+function updateFooterShortcuts(langCode) {
+  const leftBtn = document.getElementById("shortcut-left");
+  const rightBtn = document.getElementById("shortcut-right");
+
+  const cfg = FOOTER_SHORTCUTS[langCode];
+
+  // Fallback: if language not configured yet, hide shortcuts or show defaults
+  if (!cfg) {
+    leftBtn.textContent = "Contents";
+    leftBtn.onclick = () => goToPage(1);
+    rightBtn.textContent = "Search";
+    rightBtn.onclick = () => document.getElementById("search-input")?.focus();
+    return;
+  }
+
+  leftBtn.textContent = cfg.leftLabel;
+  leftBtn.onclick = () => goToPage(cfg.leftTarget);
+
+  rightBtn.textContent = cfg.rightLabel;
+  rightBtn.onclick = () => goToPage(cfg.rightTarget);
+}
+
+
+const FOOTER_SHORTCUTS = {
+  xh: {
+    leftLabel: "Imibhedesho",
+    leftTarget: 3,
+    rightLabel: "Amaculo",
+    rightTarget: 288
+  },
+  en: {
+    leftLabel: "Liturgy",
+    leftTarget: 3,
+    rightLabel: "Hymns",
+    rightTarget: 200 // example — set to your real hymns start page
+  }
+  // st: {...}
+};
 
 // Load preferences on app start
 loadThemePreference();
