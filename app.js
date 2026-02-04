@@ -1,7 +1,16 @@
 // Initialization & State
 let hymnalData = [];
-let currentPage = 3; // Start at the Table of Contents
+let currentPage = 1;
 let maxPage = 0;
+
+const LANGUAGES = [
+    { code: "af", label: "Afrikaans" },
+    { code: "en", label: "English" },
+    { code: "st", label: "Sesotho" },
+    { code: "xh", label: "IsiXhosa" }
+].sort((a, b) => a.label.localeCompare(b.label));
+
+const LANGUAGE_KEY = "amec-hymnal-language";
 
 // Load saved page preference
 const savedPage = localStorage.getItem('amec-hymnal-current-page');
@@ -9,34 +18,74 @@ if (savedPage) {
     currentPage = parseInt(savedPage) || 3;
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+    setupLanguageDropdown();
+
+    const savedLang = localStorage.getItem(LANGUAGE_KEY);
+
+    if (savedLang) {
+        loadLanguage(savedLang);
+    } else {
+        showLanguagePrompt();
+    }
+});
+
 // Fetch Data
-fetch('hymnal_data.json')
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
-    })
-    .then(data => {
-        hymnalData = data;
+function loadLanguage(langCode) {
+    const select = document.getElementById("language-select");
+    select.value = langCode;
 
-        // Calculate the highest page number in the file
-        if (hymnalData.length > 0) {
+    const file = `hymnal_${langCode}.json`;
+
+    fetch(file)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Failed to load hymnal");
+            }
+            return response.json();
+        })
+        .then(data => {
+            hymnalData = data;
             maxPage = Math.max(...hymnalData.map(p => p.page));
-        }
 
-        renderPage(currentPage);
-    })
-    .catch(err => {
-        console.error("Error loading data:", err);
+            currentPage = 1; // ALWAYS start at Dedication
+            renderPage(currentPage);
+        })
+        .catch(err => {
+            console.error(err);
+            showErrorMessage("Unable to load hymnal language.");
+        });
+}
 
-        // Check if we're offline
-        if (!navigator.onLine) {
-            showOfflineMessage();
-        } else {
-            showErrorMessage("Failed to load hymnal data. Please check your connection and try again.");
-        }
+
+function setupLanguageDropdown() {
+    const select = document.getElementById("language-select");
+
+    LANGUAGES.forEach(lang => {
+        const option = document.createElement("option");
+        option.value = lang.code;
+        option.textContent = lang.label;
+        select.appendChild(option);
     });
+
+    select.addEventListener("change", () => {
+        if (!select.value) return;
+
+        localStorage.setItem(LANGUAGE_KEY, select.value);
+        loadLanguage(select.value);
+    });
+}
+
+function showLanguagePrompt() {
+    const contentArea = document.getElementById("content-area");
+    contentArea.innerHTML = `
+    <div style="margin-top:60px">
+      <h2>Choose Hymnal Language</h2>
+      <p>Please select a language from the top menu to begin.</p>
+    </div>
+  `;
+}
+
 
 // Offline message function
 function showOfflineMessage() {

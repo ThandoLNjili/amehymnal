@@ -16,7 +16,8 @@ const STATIC_ASSETS = [
 ];
 
 const DATA_ASSETS = [
-    './hymnal_data.json'
+    './hymnal_data.json',
+    './hymnal_xh.json'
 ];
 
 // Install event - cache static assets

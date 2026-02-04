@@ -25,6 +25,9 @@
         <div class="nav-right">
             <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
             <button id="font-toggle" aria-label="Increase Font Size">A+</button>
+            <select id="language-select" aria-label="Select Language">
+                <option value="">Choose language…</option>
+            </select>
         </div>
     </nav>
 
@@ -34,7 +37,8 @@
             <span class="update-icon">🔄</span>
             <span class="update-message">A new version is available!</span>
             <button id="update-button" class="update-button" onclick="refreshApp()">Update Now</button>
-            <button id="dismiss-update" class="dismiss-button" onclick="document.getElementById('update-banner').style.display='none'">×</button>
+            <button id="dismiss-update" class="dismiss-button"
+                onclick="document.getElementById('update-banner').style.display='none'">×</button>
         </div>
     </div>
 
