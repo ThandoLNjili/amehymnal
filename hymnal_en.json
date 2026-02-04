@@ -1,0 +1,66 @@
+[
+  {
+    "page": 1,
+    "title": "Dedication",
+    "content": [
+      {
+        "type": "heading-1",
+        "text": "Dedication"
+      },
+      {
+        "type": "text-block",
+        "text": "This digital hymnal is lovingly developed for the glory of God and the edification of His Church."
+      },
+      {
+        "type": "text-block",
+        "text": "Created and maintained by <strong>Thandolwethu Njili</strong> in service of the African Methodist Episcopal Church."
+      },
+      {
+        "type": "rubric",
+        "text": "“Whatever you do, do it all for the glory of God.”<br>— 1 Corinthians 10:31"
+      }
+    ]
+  },
+  {
+    "page": 2,
+    "title": "User Guide",
+    "content": [
+      {
+        "type": "heading-1",
+        "text": "How to Use This App"
+      },
+      {
+        "type": "heading-3",
+        "text": "Finding a Hymn"
+      },
+      {
+        "type": "text-block",
+        "text": "<strong>Search Bar:</strong> Located at the top of the screen. Type a hymn number (e.g., \"23\") to jump directly to it, or type lyrics to search."
+      },
+      {
+        "type": "heading-3",
+        "text": "Navigation"
+      },
+      {
+        "type": "text-block",
+        "text": "<strong>Turning Pages:</strong> Use the <em>Prev/Next</em> buttons at the bottom, or simply swipe your finger left or right on the screen."
+      },
+      {
+        "type": "text-block",
+        "text": "<strong>Quick Shortcuts:</strong> At the very bottom, tap <em>Imibhedesho</em> to go to the Liturgy or <em>Amaculo</em> to jump to Hymn 1."
+      },
+      {
+        "type": "heading-3",
+        "text": "Settings"
+      },
+      {
+        "type": "text-block",
+        "text": "<strong>Dark Mode:</strong> Tap the Moon icon (🌙) in the top right corner for night reading."
+      },
+      {
+        "type": "text-block",
+        "text": "<strong>Font Size:</strong> Tap the (A+) icon in the top right to make the text larger."
+      }
+    ]
+  }
+]
