@@ -1,66 +1,978 @@
 [
-  {
-    "page": 1,
-    "title": "Dedication",
-    "content": [
-      {
-        "type": "heading-1",
-        "text": "Dedication"
-      },
-      {
-        "type": "text-block",
-        "text": "This digital hymnal is lovingly developed for the glory of God and the edification of His Church."
-      },
-      {
-        "type": "text-block",
-        "text": "Created and maintained by <strong>Thandolwethu Njili</strong> in service of the African Methodist Episcopal Church."
-      },
-      {
-        "type": "rubric",
-        "text": "“Whatever you do, do it all for the glory of God.”<br>— 1 Corinthians 10:31"
-      }
-    ]
-  },
-  {
-    "page": 2,
-    "title": "User Guide",
-    "content": [
-      {
-        "type": "heading-1",
-        "text": "How to Use This App"
-      },
-      {
-        "type": "heading-3",
-        "text": "Finding a Hymn"
-      },
-      {
-        "type": "text-block",
-        "text": "<strong>Search Bar:</strong> Located at the top of the screen. Type a hymn number (e.g., \"23\") to jump directly to it, or type lyrics to search."
-      },
-      {
-        "type": "heading-3",
-        "text": "Navigation"
-      },
-      {
-        "type": "text-block",
-        "text": "<strong>Turning Pages:</strong> Use the <em>Prev/Next</em> buttons at the bottom, or simply swipe your finger left or right on the screen."
-      },
-      {
-        "type": "text-block",
-        "text": "<strong>Quick Shortcuts:</strong> At the very bottom, tap <em>Imibhedesho</em> to go to the Liturgy or <em>Amaculo</em> to jump to Hymn 1."
-      },
-      {
-        "type": "heading-3",
-        "text": "Settings"
-      },
-      {
-        "type": "text-block",
-        "text": "<strong>Dark Mode:</strong> Tap the Moon icon (🌙) in the top right corner for night reading."
-      },
-      {
-        "type": "text-block",
-        "text": "<strong>Font Size:</strong> Tap the (A+) icon in the top right to make the text larger."
-      }
-    ]
-  }
+    {
+        "page": 1,
+        "title": "Dedication",
+        "content": [
+            {
+                "type": "heading-1",
+                "text": "Dedication"
+            },
+            {
+                "type": "text-block",
+                "text": "This digital hymnal is lovingly developed for the glory of God and the edification of His Church."
+            },
+            {
+                "type": "text-block",
+                "text": "Created and maintained by <strong>Thandolwethu Njili</strong> in service of the African Methodist Episcopal Church."
+            },
+            {
+                "type": "rubric",
+                "text": "“Whatever you do, do it all for the glory of God.”<br>— 1 Corinthians 10:31"
+            }
+        ]
+    },
+    {
+        "page": 2,
+        "title": "User Guide",
+        "content": [
+            {
+                "type": "heading-1",
+                "text": "How to Use This App"
+            },
+            {
+                "type": "heading-3",
+                "text": "Finding a Hymn"
+            },
+            {
+                "type": "text-block",
+                "text": "<strong>Search Bar:</strong> Located at the top of the screen. Type a hymn number (e.g., \"23\") to jump directly to it, or type lyrics to search."
+            },
+            {
+                "type": "heading-3",
+                "text": "Navigation"
+            },
+            {
+                "type": "text-block",
+                "text": "<strong>Turning Pages:</strong> Use the <em>Prev/Next</em> buttons at the bottom, or simply swipe your finger left or right on the screen."
+            },
+            {
+                "type": "text-block",
+                "text": "<strong>Quick Shortcuts:</strong> At the very bottom, tap <em>Imibhedesho</em> to go to the Liturgy or <em>Amaculo</em> to jump to Hymn 1."
+            },
+            {
+                "type": "heading-3",
+                "text": "Settings"
+            },
+            {
+                "type": "text-block",
+                "text": "<strong>Dark Mode:</strong> Tap the Moon icon (🌙) in the top right corner for night reading."
+            },
+            {
+                "type": "text-block",
+                "text": "<strong>Font Size:</strong> Tap the (A+) icon in the top right to make the text larger."
+            }
+        ]
+    },
+    {
+        "page": 4,
+        "title": "Order of Service",
+        "category": "Liturgy",
+        "content": [
+            {
+                "type": "heading-1",
+                "text": "ORDER OF SERVICE"
+            },
+            {
+                "type": "heading-2",
+                "text": "I."
+            },
+            {
+                "type": "text-block",
+                "text": "Doxology, or Prelude."
+            },
+            {
+                "type": "heading-2",
+                "text": "II."
+            },
+            {
+                "type": "rubric",
+                "text": "After announcing the Scripture Lesson and the Hymn, the Minister and congregation, standing, shall read responsively the following:"
+            },
+            {
+                "type": "responsive-reading",
+                "number": "Minister.",
+                "text": "I was glad when they said unto me, let us go into the house of the Lord; our feet shall stand within thy gates, O Jerusalem."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "People.",
+                "text": "For a day in thy courts is better than a thousand. I had rather be a doorkeeper in the house of my God than to dwell in the tents of wickedness."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "Minister.",
+                "text": "Because of the house of the Lord our God I will seek thy good."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "People.",
+                "text": "Those that be planted in the house of the Lord shall flourish in the courts of our God."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "Minister.",
+                "text": "Blessed are they that dwell in thy house. Lord, I have loved thy habitation, the place where thy honor dwelleth."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "People",
+                "text": "For the Lord is in his holy temple, let all the earth keep silence before him."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "Minister.",
+                "text": "Let the words of my mouth, and the meditation of my heart, be acceptable in thy sight, O Lord, my strength and my Redeemer."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "People.",
+                "text": "O sing unto the Lord a new song, for he has done marvelous things. Make a joyful noise unto the Lord, all the earth, sing praises."
+            },
+            {
+                "type": "heading-2",
+                "text": "III."
+            },
+            {
+                "type": "rubric",
+                "text": "Singing Opening Hymn. (All sing.) (Standing.)"
+            },
+            {
+                "type": "heading-2",
+                "text": "IV."
+            },
+            {
+                "type": "rubric",
+                "text": "Prayer. (All kneeling.)"
+            },
+            {
+                "type": "heading-2",
+                "text": "V."
+            },
+            {
+                "type": "text-block",
+                "text": "Organ Voluntary."
+            },
+            {
+                "type": "heading-2",
+                "text": "VI."
+            },
+            {
+                "type": "rubric",
+                "text": "Scripture Lessons. (Pastor and Congregation responsively.)"
+            },
+            {
+                "type": "heading-2",
+                "text": "VII."
+            },
+            {
+                "type": "rubric",
+                "text": "Congregation arising, sing:"
+            },
+            {
+                "type": "text-block",
+                "text": "“From all that dwell below the skies,\nLet the Creator's praise arise;” etc. (Hymn No. 10.)"
+            },
+            {
+                "type": "heading-2",
+                "text": "VIII."
+            },
+            {
+                "type": "rubric",
+                "text": "The congregation standing, repeating the Ten Commandments."
+            },
+            {
+                "type": "text-block",
+                "text": "And God spake all these words, saying:"
+            },
+            {
+                "type": "responsive-reading",
+                "number": "Minister.",
+                "text": "I am the Lord thy God, who brought thee out of the land of Egypt, out of the house of bondage."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "People.",
+                "text": "Lord have mercy upon us, and incline our hearts to keep this law."
+            }
+        ]
+    },
+    {
+        "page": 5,
+        "title": "The Ten Commandments",
+        "category": "Liturgy",
+        "content": [
+            {
+                "type": "heading-2",
+                "text": "II."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "Minister",
+                "text": "Thou shalt not make unto thee any graven image, or any likeness of anything that is in heaven above, or that is in the earth beneath, or that is in the water under the earth: thou shalt not bow down thyself to them, nor serve them: for I the Lord thy God am a jealous God, visiting the iniquity of the fathers upon the children unto the third and fourth generation of them that hate me; and showing mercy unto thousands of them that love me, and keep my commandments."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "People",
+                "text": "Lord have mercy upon us, and incline our hearts to keep this law."
+            },
+            {
+                "type": "heading-2",
+                "text": "III."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "Minister",
+                "text": "Thou shalt not take the name of the Lord thy God in vain; for the Lord will not hold him guiltless that taketh his name in vain."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "People",
+                "text": "Lord have mercy upon us, and incline our hearts to keep this law."
+            },
+            {
+                "type": "heading-2",
+                "text": "IV."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "Minister",
+                "text": "Remember the Sabbath day to keep it holy. Six days shalt thou labor, and do all thy work; but the seventh day is the Sabbath of the Lord thy God: in it thou shalt not do any work; thou, nor thy son, nor thy daughter, thy manservant, nor thy maidservant, nor thy cattle, nor thy stranger that is within thy gates. For in six days the Lord made heaven and earth, the sea, and all that in them is, and rested the seventh day; wherefore the Lord blessed the Sabbath day, and hallowed it."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "People",
+                "text": "Lord have mercy upon us, and incline our hearts to keep this law."
+            },
+            {
+                "type": "heading-3",
+                "text": "THATCHER. S. M."
+            },
+            {
+                "type": "rubric",
+                "text": "My soul be on thy guard,\nTen thousand foes arise;\nAnd hosts of sin are pressing hard,\nTo draw thee from the skies."
+            },
+            {
+                "type": "heading-2",
+                "text": "V."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "Minister",
+                "text": "Honor thy father and thy mother: that thy days may be long upon the land which the Lord thy God giveth thee."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "People",
+                "text": "Lord have mercy upon us, and incline our hearts to keep this law."
+            },
+            {
+                "type": "heading-2",
+                "text": "VI."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "Minister",
+                "text": "Thou shalt not kill."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "People",
+                "text": "Lord have mercy upon us, and incline our hearts to keep this law."
+            },
+            {
+                "type": "heading-2",
+                "text": "VII."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "Minister",
+                "text": "Thou shalt not commit adultery."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "People",
+                "text": "Lord have mercy upon us, and incline our hearts to keep this law."
+            }
+        ]
+    },
+    {
+        "page": 6,
+        "title": "The Ten Commandments (Conclusion)",
+        "category": "Liturgy",
+        "content": [
+            {
+                "type": "heading-2",
+                "text": "VIII."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "Minister",
+                "text": "Thou shalt not steal."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "People",
+                "text": "Lord have mercy upon us, and incline our hearts to keep this law."
+            },
+            {
+                "type": "heading-2",
+                "text": "IX."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "Minister",
+                "text": "Thou shalt not bear false witness against thy neighbor."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "People",
+                "text": "Lord have mercy upon us, and incline our hearts to keep this law."
+            },
+            {
+                "type": "heading-2",
+                "text": "X."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "Minister",
+                "text": "Thou shalt not covet thy neighbor's house; thou shalt not covet thy neighbor's wife, nor his manservant, nor his maidservant, nor his ox, nor his ass, nor anything that is thy neighbor's."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "People",
+                "text": "Lord have mercy upon us, and write these laws upon our hearts."
+            },
+            {
+                "type": "heading-3",
+                "text": "BETHANY. 6.4.6"
+            },
+            {
+                "type": "text-block",
+                "text": "Lowell Mason"
+            },
+            {
+                "type": "rubric",
+                "text": "Nearer, my God, to thee!\nNearer to thee, E'en though it be a cross\nThat raiseth me;\nStill all my song shall be,\nNearer, my God, to thee,\nNearer to thee!"
+            },
+            {
+                "type": "text-block",
+                "text": "D. S.—Nearer, my God, to thee, Nearer to Thee!"
+            },
+            {
+                "type": "responsive-reading",
+                "number": "Minister",
+                "text": "Hear what Christ our Saviour saith, Thou shalt love the Lord thy God with all thy heart, and with all thy soul, and with all thy mind. This is the first and great commandment. And the second is like unto it: Thou shalt love thy neighbor as thyself. On these two commandments hang all the law and the prophets."
+            },
+            {
+                "type": "heading-2",
+                "text": "9.—Gloria Patri."
+            },
+            {
+                "type": "heading-3",
+                "text": "GLORY BE TO THE FATHER"
+            },
+            {
+                "type": "text-block",
+                "text": "Glory be to the Father, and to the Son, and to the Holy Ghost.\nAs it was in the beginning, is now, and ever shall be, world without end. Amen."
+            },
+            {
+                "type": "heading-2",
+                "text": "10.—Notices."
+            },
+            {
+                "type": "heading-2",
+                "text": "11.—The 2nd Hymn by Choir and Congregation."
+            },
+            {
+                "type": "heading-2",
+                "text": "12.—The Sermon."
+            },
+            {
+                "type": "heading-2",
+                "text": "13.—Prayer (Chanted, all kneeling.)"
+            }
+        ]
+    },
+    {
+        "page": 7,
+        "title": "The Lord's Prayer, Creed, and Te Deum",
+        "category": "Liturgy",
+        "content": [
+            {
+                "type": "heading-1",
+                "text": "THE LORD'S PRAYER"
+            },
+            {
+                "type": "text-block",
+                "text": "Our Father who art in heaven,\nHallowed be thy Name\nThy kingdom come,\nThy will be done on earth,\nAs it is in heaven\nGive us this day our daily bread\nAnd forgive us our trespasses,\nAs we forgive those who trespass against us.\nAnd lead us not into temptation;\nBut deliver us from evil:\nFor thine is the kingdom,\nAnd the power, and the glory, for ever. A-men."
+            },
+            {
+                "type": "heading-2",
+                "text": "14.—Singing and Collection."
+            },
+            {
+                "type": "text-block",
+                "text": "Give as the Lord has prospered you. The Lord loveth a cheerful giver."
+            },
+            {
+                "type": "heading-2",
+                "text": "15.—Reception of those who wish to join the church."
+            },
+            {
+                "type": "heading-2",
+                "text": "16.—Closing Services."
+            },
+            {
+                "type": "rubric",
+                "text": "Then shall be said, the Apostles' Creed, the people standing"
+            },
+            {
+                "type": "text-block",
+                "text": "I believe in God the Father Almighty, Maker of heaven and earth; and in Jesus Christ, his only son, our Lord, who was conceived by the Holy Ghost, born of the Virgin Mary, suffered under Pontius Pilate, was crucified, dead, and buried. The third day he arose from the dead; he ascended into heaven, and sitteth on the right hand of God, the Father Almighty: from thence he shall come to judge the quick and the dead. I believe in the Holy Ghost, the Holy Catholic Church, the communion of saints, the forgiveness of sin, the resurrection of the body and life everlasting."
+            },
+            {
+                "type": "heading-2",
+                "text": "17.—Doxology and Benediction."
+            },
+            {
+                "type": "rubric",
+                "text": "The following may be used at pleasure in lieu of the Decalogue, or even with it."
+            },
+            {
+                "type": "heading-1",
+                "text": "TE DEUM"
+            },
+            {
+                "type": "responsive-reading",
+                "number": "Minister",
+                "text": "We praise thee, O God; we acknowledge thee to be the Lord."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "People",
+                "text": "All the earth doth worship thee, the Father everlasting."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "Minister",
+                "text": "To thee all angels cry aloud, the heavens, and all the powers therein."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "People",
+                "text": "To thee the Cherubim and Seraphim continually do cry,"
+            }
+        ]
+    },
+    {
+        "page": 8,
+        "title": "Te Deum (Continuation)",
+        "category": "Liturgy",
+        "content": [
+            {
+                "type": "responsive-reading",
+                "number": "Minister",
+                "text": "Holy, holy, holy, Lord God of Sabaoth."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "People",
+                "text": "Heaven and earth are full of the majesty of thy glory."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "Minister",
+                "text": "The glorious company of the Apostles praise thee."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "People",
+                "text": "The goodly fellowship of the Prophets praise thee."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "Minister",
+                "text": "The noble army of martyrs praise thee."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "People",
+                "text": "The holy church throughout all the earth doth acknowledge thee."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "Minister",
+                "text": "The Father of an infinite majesty."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "People",
+                "text": "Thine adorable, true and only Son."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "Minister",
+                "text": "Also the Holy Ghost, the Comforter."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "People",
+                "text": "Thou art the King of Glory, O Christ."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "Minister",
+                "text": "Thou art the Everlasting Son of the Father."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "People",
+                "text": "When thou tookest upon thee to deliver man, thou didst humble thyself to be born of a virgin."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "Minister",
+                "text": "When thou hadst overcome the sharpness of death, thou didst open the kingdom of heaven to all believers."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "People",
+                "text": "Thou sittest at the right hand of God, in the Glory of the Father."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "Minister",
+                "text": "We believe that thou shalt come to be our judge."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "People",
+                "text": "We therefore pray thee, help thy servants, whom thou hast redeemed with thy precious blood."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "Minister",
+                "text": "Make them to be numbered with thy saints in glory everlasting."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "People",
+                "text": "O Lord, save thy people and bless thine heritage."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "Minister",
+                "text": "Govern them and lift them up forever."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "People",
+                "text": "Day by day we magnify thee."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "Minister",
+                "text": "And we worship thy name ever, world without end."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "People",
+                "text": "Vouchsafe, O Lord, to keep us this day without sin."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "Minister",
+                "text": "O Lord, have mercy upon us, have mercy upon us."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "People",
+                "text": "O Lord, let thy mercy be upon us, as our trust is in thee."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "Minister",
+                "text": "O Lord, in thee have I trusted; let me never be confounded."
+            }
+        ]
+    },
+    {
+        "page": 9,
+        "title": "Litany (Part 1)",
+        "category": "Liturgy",
+        "content": [
+            {
+                "type": "rubric",
+                "text": "Choir Chant. Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+            },
+            {
+                "type": "heading-1",
+                "text": "LITANY"
+            },
+            {
+                "type": "rubric",
+                "text": "The Litany may be used on prayer-meeting occasions and such other occasions as may be deemed necessary by the minister and people in devotional services, kneeling."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "Minister",
+                "text": "O God the Father of Heaven; have mercy upon us miserable sinners."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "People",
+                "text": "O God the Father of Heaven; have mercy upon us miserable sinners."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "Minister",
+                "text": "O God the Son, Redeemer of the world; have mercy upon us miserable sinners."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "People",
+                "text": "O God the Son, Redeemer of the world; have mercy upon us miserable sinners."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "Minister",
+                "text": "O God the Holy Ghost, proceeding from the Father and the Son; have mercy upon us miserable sinners."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "People",
+                "text": "O God the Holy Ghost, proceeding from the Father and the Son; have mercy upon us miserable sinners."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "Minister",
+                "text": "O Holy Blessed and Glorious Trinity, three Persons and one God; have mercy upon us miserable sinners."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "People",
+                "text": "O Holy Blessed and Glorious Trinity, three Persons and one God; have mercy upon us miserable sinners."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "Minister",
+                "text": "Remember not, Lord, our offenses, nor the offenses of our forefathers; neither take thou vengeance of our sins. Spare us, good Lord, spare thy people, whom thou hast redeemed with thy most precious blood, and be not angry with us forever."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "People",
+                "text": "Spare us, good Lord."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "Minister",
+                "text": "From all evil and mischief; from sin; from the crafts and assaults of the devil; from thy wrath and everlasting damnation."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "People",
+                "text": "Good Lord, deliver us."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "Minister",
+                "text": "From all blindness of heart; from pride's vain-glory and hypocrisy; from envy, hatred and malice, and all uncharitableness,"
+            },
+            {
+                "type": "responsive-reading",
+                "number": "People",
+                "text": "Good Lord, deliver us."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "Minister",
+                "text": "From all inordinate and sinful affections; and from all the deceits of the world, the flesh and the devil."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "People",
+                "text": "Good Lord, deliver us."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "Minister",
+                "text": "From lightning and tempest; from plague, pestilence and famine; from battle and murder, and from sudden death."
+            }
+        ]
+    },
+    {
+        "page": 10,
+        "title": "Litany (Part 2)",
+        "category": "Liturgy",
+        "content": [
+            {
+                "type": "responsive-reading",
+                "number": "People",
+                "text": "Good Lord, deliver us."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "Minister",
+                "text": "From all sedition, privy conspiracy, and rebellion; from all false doctrine, heresy and schism; from hardness of heart and contempt of thy word and commandment,"
+            },
+            {
+                "type": "responsive-reading",
+                "number": "People",
+                "text": "Good Lord, deliver us."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "Minister",
+                "text": "Son of God, we beseech thee to hear us;"
+            },
+            {
+                "type": "responsive-reading",
+                "number": "People",
+                "text": "Son of God, we beseech thee to hear us."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "Minister",
+                "text": "O Lamb of God, who takest away the sins of the world:"
+            },
+            {
+                "type": "responsive-reading",
+                "number": "People",
+                "text": "Grant us peace."
+            },
+            {
+                "type": "responsive-reading",
+                "number": "Minister",
+                "text": "O Lamb of God, who takest away the sins of the world:"
+            },
+            {
+                "type": "responsive-reading",
+                "number": "People",
+                "text": "Have mercy upon us."
+            },
+            {
+                "type": "rubric",
+                "text": "Choir Chant. Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+            }
+        ]
+    },
+    {
+        "page": 11,
+        "title": "The Lord's Supper or Holy Communion",
+        "category": "Liturgy",
+        "content": [
+            {
+                "type": "heading-1",
+                "text": "THE LORD'S SUPPER OR HOLY COMMUNION"
+            },
+            {
+                "type": "rubric",
+                "text": "The Elder shall read one or more of these scriptures:"
+            },
+            {
+                "type": "text-block",
+                "text": "Let your light so shine before men that they may see your good works and glorify your Father which is in heaven. Matt. 5:16."
+            },
+            {
+                "type": "text-block",
+                "text": "Lay not up for yourselves treasures upon earth where moth and rust doth corrupt, and where thieves break through and steal; but lay up for yourselves treasures in heaven, where neither moth nor rust doth corrupt and where thieves do not break through nor steal. Matt. 6:19,20."
+            },
+            {
+                "type": "text-block",
+                "text": "Whatsoever ye would that men should do to you, do ye even so to them, for this is the law and the prophets. Mach. 7:12."
+            },
+            {
+                "type": "text-block",
+                "text": "Not every one that saith unto me, Lord, Lord, shall enter the Kingdom of heaven, but he that doeth the will of my Father which is in heaven. Matt. 7:21."
+            },
+            {
+                "type": "text-block",
+                "text": "Zacchaeus stood and said unto the Lord, Behold, Lord the half of my goods I give to the poor; and if I have taken anything from any man by false accusation, I restore him fourfold. Luke 19:8."
+            },
+            {
+                "type": "text-block",
+                "text": "He which soweth sparingly shall reap also sparingly; and he which soweth bountifully shall reap also bountifully. Every man, according as he purposeth in his own heart, so let him give; not grudgingly, nor of necessity, for God loveth a cheerful giver. 11 Cor. 9:6,7."
+            },
+            {
+                "type": "text-block",
+                "text": "As we have therefore opportunity, let us do good unto all men, especially unto them who are of the household of faith. Gal. 6:10."
+            },
+            {
+                "type": "text-block",
+                "text": "Godliness with contentment is great gain. For we brought nothing into this world, and it is certain we can carry nothing out. 1 Timothy 6:6,7."
+            }
+        ]
+    },
+    {
+        "page": 12,
+        "title": "Holy Communion Scriptures (Continuation)",
+        "category": "Liturgy",
+        "content": [
+            {
+                "type": "text-block",
+                "text": "Charge them that are rich in this world that they be not high minded nor trust in uncertain riches, but in the living God who giveth us richly all things to enjoy; that they do good; that they be rich in good works, ready to distribute, willing to communicate, laying up in store for themselves a good foundation against the time to come that they may hold on eternal life. 1 Tim. 6:17, 18, 19."
+            },
+            {
+                "type": "text-block",
+                "text": "God is not unrighteous to forget your work and labour of love which ye have showed toward his name, in that ye have ministered to the saints, and do minister. Heb. 13:16."
+            },
+            {
+                "type": "text-block",
+                "text": "But who so hath this world's goods, and seeth his brother hath need, and shutteth up his bowels of compassion from him, how dwelleth the love of God in him? 1 John 3:17."
+            },
+            {
+                "type": "text-block",
+                "text": "He that hath pity upon the poor, lendeth unto the Lord; and that which he hath given will he pay him again. Prov. 19:17."
+            }
+        ]
+    },
+    {
+        "page": 13,
+        "title": "Invitation and Confession",
+        "category": "Liturgy",
+        "content": [
+            {
+                "type": "heading-2",
+                "text": "Invitation"
+            },
+            {
+                "type": "text-block",
+                "text": "You that do so truly and earnestly repent of your sins, and are in love and charity with your neighbor, and intend to lead a new life, following the commandments of God, and walking from henceforth in His holy ways, draw near with faith and take this holy sacrament to your comfort; and make your humble confession to Almighty God, meekly kneeling."
+            },
+            {
+                "type": "heading-2",
+                "text": "General Confession"
+            },
+            {
+                "type": "text-block",
+                "text": "Almighty God, Father of our Lord Jesus Christ, Maker of all things, Judge of all people, we acknowledge and bewail our manifold sins and wickedness which we from time to time most grievously have committed by thought, word and deed against Thy Divine Majesty, provoking most justly thy wrath and indignation against us. We do earnestly repent and are heartily sorry for these our misdoings; the remembrance of them is grievous unto us."
+            },
+            {
+                "type": "text-block",
+                "text": "Have mercy upon us, have mercy upon us, most merciful Father for your Son our Lord Jesus Christ's sake; forgive us all that is past, and grant that we may ever hereafter serve and please thee in newness of life, to the honor and glory of your name, through Jesus Christ our Lord, Amen."
+            },
+            {
+                "type": "heading-2",
+                "text": "First Collect"
+            },
+            {
+                "type": "rubric",
+                "text": "Then shall the Elder say:"
+            },
+            {
+                "type": "text-block",
+                "text": "Almighty God, our Heavenly Father, who of your great mercy has promised forgiveness of sins to all them that with hearty repentance and true faith turn unto you, have mercy upon us; pardon and deliver us from all our sins; confirm and strengthen us in all goodness; and bring us to everlasting life through Jesus Christ, our Lord, Amen."
+            }
+        ]
+    },
+    {
+  "page": 14,
+  "title": "Second Collect and Prayers",
+  "category": "Liturgy",
+  "content": [
+    { "type": "heading-2", "text": "Second Collect" },
+    { "type": "rubric", "text": "Then shall the Elder say:" },
+    {
+      "type": "text-block",
+      "text": "Almighty God, unto whom all hearts are open, all desires are known, and from whom no secrets are hid, cleanse the thoughts from our hearts by the inspiration of our Holy Spirit that we may perfectly love you, and worthily magnify your holy name through Jesus Christ, our Lord, Amen."
+    },
+
+    { "type": "heading-2", "text": "Prayer of Adoration" },
+    { "type": "rubric", "text": "Then shall the Elder say:" },
+    {
+      "type": "text-block",
+      "text": "It is very meet, right and our bounden duty that we shall at all times, and in all places give thanks unto you, O Lord, Holy Father, Almighty, Everlasting God."
+    },
+
+    { "type": "rubric", "text": "Then shall the Elder sing:" },
+    {
+      "type": "text-block",
+      "text": "Therefore, with angels and archangels, and with all the company of heaven, we laud and magnify your Holy Name evermore praising you and saying Holy, Holy, Holy, Lord God of hosts; heaven and earth are full of your glory, Glory be to you, O Lord, most high. Amen."
+    },
+
+    { "type": "heading-2", "text": "Prayer of Humiliation" },
+    { "type": "rubric", "text": "Then shall the Elder say:" },
+    {
+      "type": "text-block",
+      "text": "We do not presume to come to your table, O merciful Lord, trusting in our righteousness, but in your manifold and great mercies. We are not worthy to gather up the crumbs under your table. But you are the same Lord whose property is always to have mercy. Grant us, therefore gracious Lord, so to eat the flesh of your dear Son Jesus Christ, and drink his blood that our sinful souls and bodies may be made clean by his death and washed through his blood, and that we may ever more dwell in him and he in us. Amen."
+    }
+  ]
+},
+{
+  "page": 15,
+  "title": "Prayer of Consecration",
+  "category": "Liturgy",
+  "content": [
+    { "type": "heading-2", "text": "Prayer of Consecration" },
+    { "type": "rubric", "text": "Then shall the Elder say:" },
+    {
+      "type": "text-block",
+      "text": "Almighty God, our Heavenly Father, who for thy tender mercy didst give thine only Son, Jesus Christ, to suffer death on the cross for our redemption, who made thereby his oblation of himself, once offered; a full, perfect and sufficient sacrifice, oblation, and satisfaction for the sins of the whole world; and did institute and in his holy gospel command us to continue a perpetual memory of that, his precious death, until his coming again."
+    },
+    {
+      "type": "text-block",
+      "text": "Hear us, O merciful Father, we most humbly beseech thee, and grant that we receiving these thy creatures of bread and wine, according to thy Son, our Saviour Jesus Christ's holy institution, in remembrance of his death and passion, may be partakers of his most blessed body and blood:"
+    },
+    {
+      "type": "rubric",
+      "text": "Who in the same night that he was betrayed took bread (1) Here the Elder is to take the piece of bread into his hand and when he had given thanks, he broke it, (2) the celebrant breaks the bread, and gave it to his disciples saying “Take, eat; this (3) and here lay his hand upon all the bread, is my body which is broken for you. This do remembrance of me.”"
+    },
+    {
+      "type": "rubric",
+      "text": "Likewise after supper he took the cup (4) and here to lay his hands upon all the vessels containing the wine, and when he had given thanks he gave it to them saying, “Drink ye all of it, for this is my blood of the New Testament, which is shed for you and for many for the remission of sins; do this, as often as you shall drink it, in remembrance of me.” Amen."
+    },
+    {
+      "type": "rubric",
+      "text": "Then shall the minister first receive the communion in both kinds himself, and then proceed to deliver the same to the other ministers in like manner (if any be present), and after that to the people in order, into their hands."
+    },
+    {
+      "type": "rubric",
+      "text": "And when he delivereth the bread he shall say:"
+    },
+    {
+      "type": "text-block",
+      "text": "The body of our Lord Jesus Christ, which was given for thee, to preserve thy soul and body unto everlasting life."
+    }
+  ]
+},
+{
+  "page": 16,
+  "title": "Thanksgiving After Communion",
+  "category": "Liturgy",
+  "content": [
+    {
+      "type": "text-block",
+      "text": "Take and eat this in remembrance that Christ died for thee, and feed on him in thy heart by faith, with thanksgiving."
+    },
+    {
+      "type": "rubric",
+      "text": "And the minister that delivereth the cup shall say:"
+    },
+    {
+      "type": "text-block",
+      "text": "The blood of our Lord Jesus Christ, which was shed for thee, drink this in remembrance that Christ's blood was shed for thee and be thankful."
+    },
+
+    { "type": "heading-2", "text": "The Lord's Prayer" },
+    {
+      "type": "text-block",
+      "text": "Our Father who art in heaven, hallowed be thy name. The Kingdom come. Thy will be done on earth as it is in heaven. Give us this day our daily bread. And forgive us our trespasses as we forgive those who trespass against us. And lead us not into temptation, but deliver us from evil; for thine is the kingdom, and the power, and the glory forever. Amen."
+    },
+
+    { "type": "heading-2", "text": "The Prayer of Thanksgiving" },
+    {
+      "type": "text-block",
+      "text": "O Lord, our heavenly Father, we, thy humble servants, desire thy fatherly goodness mercifully to accept this our sacrifice of praise and thanksgiving; most humbly beseeching thee to grant that by the merits and death of thy Son, Jesus Christ, and through faith in his blood, we and thy whole church may obtain remission of our sins and all other benefits of his passion."
+    },
+    {
+      "type": "text-block",
+      "text": "And here we offer and present unto thee, O Lord, ourselves, our souls and bodies, to be a reasonable, holy, and living sacrifice unto thee; humbly beseeching thee that all we who are partakers of this Holy Communion may be filled with thy grace and heavenly benediction."
+    },
+    {
+      "type": "text-block",
+      "text": "And although we be unworthy, through our manifold sins, to offer unto thee any sacrifice, yet we beseech thee to accept this our bounden duty and service; not weighing our merits, but pardoning our offenses, through Christ our Lord; by whom and with whom in the unity of the Holy Ghost all honor and glory be unto thee, O Father Almighty, world without end. Amen."
+    }
+  ]
+}
+
 ]
