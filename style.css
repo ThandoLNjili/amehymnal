@@ -2,17 +2,22 @@
    1. VARIABLES & THEME SETUP (AME EDITION)
    ========================================= */
 :root {
-    --bg-color: #fdfbf7;        /* Warm paper-like background */
-    --text-color: #2c2c2c;      /* Dark gray for readability */
-    
+    --bg-color: #fdfbf7;
+    /* Warm paper-like background */
+    --text-color: #2c2c2c;
+    /* Dark gray for readability */
+
     /* AME BRAND COLORS */
-    --accent-color: #4b0082;    /* Episcopal Royal Purple (Indigo) */
-    --highlight-gold: #daa520;  /* Goldenrod - typical for AME trim */
-    
-    --rubric-color: #555555;    /* Gray for instructions */
+    --accent-color: #4b0082;
+    /* Episcopal Royal Purple (Indigo) */
+    --highlight-gold: #daa520;
+    /* Goldenrod - typical for AME trim */
+
+    --rubric-color: #555555;
+    /* Gray for instructions */
     --nav-bg: #ffffff;
     --border-color: #dddddd;
-    
+
     --font-serif: 'Georgia', 'Times New Roman', serif;
     --base-font-size: 18px;
     --line-height: 1.6;
@@ -22,11 +27,12 @@
 body.dark-mode {
     --bg-color: #121212;
     --text-color: #e0e0e0;
-    
+
     /* Lighter Purple for readability on dark screens */
-    --accent-color: #bb86fc;    
-    --highlight-gold: #ffd700;  /* Brighter Gold */
-    
+    --accent-color: #bb86fc;
+    --highlight-gold: #ffd700;
+    /* Brighter Gold */
+
     --rubric-color: #aaaaaa;
     --nav-bg: #1e1e1e;
     --border-color: #333333;
@@ -51,12 +57,14 @@ body {
 }
 
 .page-container {
-    max-width: 800px;       
-    margin: 0 auto;         
-    padding: 24px;          
-    padding-bottom: 120px;  /* Space for bottom controls */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 24px;
+    padding-bottom: 120px;
+    /* Space for bottom controls */
     box-sizing: border-box;
-    text-align: center;     /* Global Centering for Liturgy */
+    text-align: center;
+    /* Global Centering for Liturgy */
 }
 
 /* =========================================
@@ -93,7 +101,7 @@ body {
     font-size: 0.95em;
     line-height: 1.5;
     /* Essential: Respects new lines (\n) in JSON text */
-    white-space: pre-line; 
+    white-space: pre-line;
 }
 
 .text-block {
@@ -102,7 +110,7 @@ body {
 }
 
 .responsive-reading {
-    display: block; 
+    display: block;
     margin-bottom: 1em;
     text-align: center;
 }
@@ -110,7 +118,7 @@ body {
 .verse-num {
     font-weight: bold;
     color: var(--accent-color);
-    margin-right: 8px; 
+    margin-right: 8px;
     display: inline;
 }
 
@@ -128,7 +136,7 @@ body {
 
 /* Big Hymn Number */
 .hymn-number {
-    font-size: 2.8em;       
+    font-size: 2.8em;
     font-weight: bold;
     color: var(--accent-color);
     line-height: 1;
@@ -136,20 +144,20 @@ body {
 
 /* Small Key/Meter below it */
 .hymn-meter {
-    font-size: 0.9em;       
+    font-size: 0.9em;
     font-weight: normal;
     color: var(--rubric-color);
-    margin-top: 5px;        
-    letter-spacing: 2px;    
+    margin-top: 5px;
+    letter-spacing: 2px;
     text-transform: uppercase;
 }
 
 /* Centered Poem Layout */
 .stanza {
     margin: 2em auto;
-    text-align: center;     
+    text-align: center;
     line-height: 1.6;
-    max-width: 600px;       
+    max-width: 600px;
 }
 
 .stanza p {
@@ -161,15 +169,16 @@ body {
    ========================================= */
 .toc-row {
     display: flex;
-    align-items: flex-end; 
+    align-items: flex-end;
     margin-bottom: 0.8em;
     cursor: pointer;
     padding: 5px 0;
-    text-align: left; /* Keep Index left-aligned for readability */
+    text-align: left;
+    /* Keep Index left-aligned for readability */
 }
 
 .toc-row:hover {
-    background-color: rgba(0,0,0,0.05);
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 .toc-num {
@@ -179,7 +188,7 @@ body {
 }
 
 .toc-text {
-    flex-grow: 1; 
+    flex-grow: 1;
     font-weight: bold;
     text-align: left;
 }
@@ -187,7 +196,7 @@ body {
 .toc-dots {
     flex-grow: 1;
     border-bottom: 2px dotted var(--rubric-color);
-    margin: 0 5px 5px 5px; 
+    margin: 0 5px 5px 5px;
     opacity: 0.5;
 }
 
@@ -209,7 +218,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     text-align: left;
 }
 
@@ -251,18 +260,79 @@ body {
     color: var(--text-color);
     height: 36px;
     padding: 5px 10px;
-    margin-left: 5px;
+    /* margin-left: 5px; */
     border-radius: 4px;
     font-size: 0.9em;
     cursor: pointer;
 }
+
+/* --- Mobile hamburger menu --- */
+.navbar {
+    position: relative;
+}
+
+/* so menu can anchor nicely */
+
+.menu-toggle {
+    display: none;
+    /* desktop hidden */
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+/* Desktop: controls visible inline */
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Mobile behaviour */
+@media (max-width: 480px) {
+    .menu-toggle {
+        display: inline-flex;
+    }
+
+    /* Hide menu panel by default */
+    .nav-controls {
+        display: none;
+        position: absolute;
+        top: 60px;
+        /* adjust if needed */
+        right: 12px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        padding: 12px;
+        background: var(--nav-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+        z-index: 999;
+        min-width: 200px;
+    }
+
+    .nav-controls.open {
+        display: flex;
+    }
+
+    /* Optional: make the select full width inside the menu */
+    .nav-controls .language-select-wrapper select {
+        width: 100%;
+    }
+}
+
 
 /* Search Bar Container */
 .search-container {
     padding: 15px 24px;
     max-width: 800px;
     margin: 0 auto;
-    position: relative; /* Anchor for dropdown */
+    position: relative;
+    /* Anchor for dropdown */
 }
 
 #search-input {
@@ -286,7 +356,7 @@ body {
     background: var(--nav-bg);
     border: 1px solid var(--border-color);
     border-radius: 0 0 8px 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     max-height: 300px;
     overflow-y: auto;
@@ -306,7 +376,7 @@ body {
 }
 
 .search-option:hover {
-    background-color: rgba(0,0,0,0.05);
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 .offline-indicator {
@@ -320,9 +390,17 @@ body {
 }
 
 @keyframes pulse {
-    0% { opacity: 1; }
-    50% { opacity: 0.7; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 /* Dark mode adjustments */
@@ -351,8 +429,9 @@ body {
     padding: 12px 24px;
     position: sticky;
     top: 0;
-    z-index: 1001; /* Above navbar */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 1001;
+    /* Above navbar */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     animation: slideDown 0.5s ease-out;
 }
 
@@ -419,6 +498,7 @@ body {
         transform: translateY(-100%);
         opacity: 0;
     }
+
     to {
         transform: translateY(0);
         opacity: 1;
@@ -426,8 +506,13 @@ body {
 }
 
 @keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 /* Bottom Controls */
@@ -443,7 +528,7 @@ body {
     background-color: var(--nav-bg);
     border-top: 1px solid var(--border-color);
     box-sizing: border-box;
-    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .page-controls button {
@@ -474,7 +559,7 @@ body {
 
 @media (max-width: 360px) {
     .page-container {
-        padding: 16px; 
+        padding: 16px;
     }
 
     .amec-logo {
@@ -493,7 +578,8 @@ body {
 .search-highlight {
     color: var(--accent-color);
     font-weight: bold;
-    background-color: rgba(255, 255, 0, 0.2); /* Subtle yellow highlight */
+    background-color: rgba(255, 255, 0, 0.2);
+    /* Subtle yellow highlight */
     border-radius: 3px;
     padding: 0 2px;
 }
@@ -501,7 +587,8 @@ body {
 .search-option {
     /* Ensure long lines don't break the layout */
     display: flex;
-    flex-direction: column; /* Stack Title and Lyric */
+    flex-direction: column;
+    /* Stack Title and Lyric */
     align-items: flex-start;
     gap: 4px;
 }
@@ -514,17 +601,18 @@ body {
     background-color: var(--nav-bg);
     border-top: 1px solid var(--border-color);
     padding: 10px 20px;
-    position: fixed; /* Fix to bottom of screen */
+    position: fixed;
+    /* Fix to bottom of screen */
     bottom: 0;
     left: 0;
     width: 100%;
     z-index: 200;
-    box-shadow: 0 -2px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.08);
     box-sizing: border-box;
-    
+
     /* Mobile First Layout: Stacked */
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     gap: 10px;
 }
 
@@ -550,7 +638,7 @@ body {
 }
 
 .nav-link:hover {
-    background-color: rgba(0,0,0,0.05);
+    background-color: rgba(0, 0, 0, 0.05);
     border-radius: 4px;
 }
 
@@ -599,15 +687,22 @@ body {
     }
 
     .pagination-controls {
-        display: contents; /* Ungroups the div so buttons align to grid */
+        display: contents;
+        /* Ungroups the div so buttons align to grid */
     }
 
     /* Place Prev button on far left */
-    #prev-page { grid-column: 1; justify-self: start; }
+    #prev-page {
+        grid-column: 1;
+        justify-self: start;
+    }
 
     /* Place Next button on far right */
-    #next-page { grid-column: 3; justify-self: end; }
-    
+    #next-page {
+        grid-column: 3;
+        justify-self: end;
+    }
+
     /* Place Shortcuts in center */
     .nav-shortcuts {
         grid-column: 2;
@@ -623,7 +718,7 @@ body {
     background: var(--nav-bg);
     border-radius: 12px;
     border: 2px solid var(--border-color);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .offline-message h2 {
@@ -661,8 +756,13 @@ body {
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* Page Not Found */

@@ -83,6 +83,8 @@ function showLanguagePrompt() {
     <div style="margin-top:60px">
       <h2>Choose Hymnal Language</h2>
       <p>Please select a language from the top menu to begin.</p>
+      <p><strong>On mobile:</strong> Tap the menu (☰) in the top bar and open the language option.</p>
+      <p><strong>On desktop:</strong> Use the language option in the top bar.</p>
     </div>
   `;
 }
@@ -836,6 +838,43 @@ function updateFooterShortcuts(langCode) {
   rightBtn.textContent = cfg.rightLabel;
   rightBtn.onclick = () => goToPage(cfg.rightTarget);
 }
+
+// --- Mobile hamburger menu logic ---
+const menuToggleBtn = document.getElementById('menu-toggle');
+const navControls = document.getElementById('nav-controls');
+
+function setMenuOpen(isOpen) {
+  navControls.classList.toggle('open', isOpen);
+  menuToggleBtn.textContent = isOpen ? '✕' : '☰';
+  menuToggleBtn.setAttribute('aria-expanded', String(isOpen));
+}
+
+if (menuToggleBtn && navControls) {
+  menuToggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = navControls.classList.contains('open');
+    setMenuOpen(!isOpen);
+  });
+
+  // Close when tapping outside
+  document.addEventListener('click', (e) => {
+    if (!navControls.classList.contains('open')) return;
+    if (e.target.closest('#nav-controls') || e.target.closest('#menu-toggle')) return;
+    setMenuOpen(false);
+  });
+
+  // Close after choosing language (nice UX)
+  const languageSelect = document.getElementById('language-select');
+  if (languageSelect) {
+    languageSelect.addEventListener('change', () => setMenuOpen(false));
+  }
+
+  // If user rotates / resizes to desktop, force menu closed
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 480) setMenuOpen(false);
+  });
+}
+
 
 
 const FOOTER_SHORTCUTS = {

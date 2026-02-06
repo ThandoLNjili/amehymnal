@@ -23,12 +23,20 @@
             <span class="logo">AMEC Hymnal</span>
         </div>
         <div class="nav-right">
-            <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
             <button id="font-toggle" aria-label="Increase Font Size">A+</button>
-            <div class="language-select-wrapper">
-                <select id="language-select" aria-label="Select hymnal Language">
-                    <option value="">Language…</option>
-                </select>
+
+            <button id="menu-toggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+                ☰
+            </button>
+
+            <div id="nav-controls" class="nav-controls" aria-label="Menu">
+                <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+
+                <div class="language-select-wrapper">
+                    <select id="language-select" aria-label="Select hymnal Language">
+                        <option value="">Language</option>
+                    </select>
+                </div>
             </div>
         </div>
     </nav>
@@ -40,7 +48,7 @@
             <span class="update-message">A new version is available!</span>
             <button id="update-button" class="update-button" onclick="refreshApp()">Update Now</button>
             <button id="dismiss-update" class="dismiss-button"
-                onclick="document.getElementById('update-banner').style.display='none'">×</button>
+                onclick="document.getElementById('update-banner').style.display='none'">x</button>
         </div>
     </div>
 
@@ -60,11 +68,9 @@
 
             <footer id="app-footer">
                 <div class="nav-shortcuts">
-                    <!-- <button class="nav-link" onclick="goToPage(3)">Imibhedesho</button> -->
-                     <button id="shortcut-left" class="nav-link">—</button>
+                    <button id="shortcut-left" class="nav-link">—</button>
                     <span class="divider">|</span>
-                    <!-- <button class="nav-link" onclick="goToPage(288)">Amaculo</button> -->
-                     <button id="shortcut-right" class="nav-link">—</button>
+                    <button id="shortcut-right" class="nav-link">—</button>
                 </div>
 
                 <div class="pagination-controls">

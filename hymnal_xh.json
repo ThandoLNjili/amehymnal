@@ -22,47 +22,59 @@
     ]
   },
   {
-    "page": 2,
-    "title": "User Guide",
-    "content": [
-      {
-        "type": "heading-1",
-        "text": "How to Use This App"
-      },
-      {
-        "type": "heading-3",
-        "text": "Finding a Hymn"
-      },
-      {
-        "type": "text-block",
-        "text": "<strong>Search Bar:</strong> Located at the top of the screen. Type a hymn number (e.g., \"23\") to jump directly to it, or type lyrics to search."
-      },
-      {
-        "type": "heading-3",
-        "text": "Navigation"
-      },
-      {
-        "type": "text-block",
-        "text": "<strong>Turning Pages:</strong> Use the <em>Prev/Next</em> buttons at the bottom, or simply swipe your finger left or right on the screen."
-      },
-      {
-        "type": "text-block",
-        "text": "<strong>Quick Shortcuts:</strong> At the very bottom, tap <em>Imibhedesho</em> to go to the Liturgy or <em>Amaculo</em> to jump to Hymn 1."
-      },
-      {
-        "type": "heading-3",
-        "text": "Settings"
-      },
-      {
-        "type": "text-block",
-        "text": "<strong>Dark Mode:</strong> Tap the Moon icon (🌙) in the top right corner for night reading."
-      },
-      {
-        "type": "text-block",
-        "text": "<strong>Font Size:</strong> Tap the (A+) icon in the top right to make the text larger."
-      }
-    ]
-  },
+  "page": 2,
+  "title": "User Guide",
+  "content": [
+    { "type": "heading-1", "text": "How to Use This App" },
+
+    { "type": "heading-3", "text": "Finding a Hymn" },
+    {
+      "type": "text-block",
+      "text": "<strong>Search Bar:</strong> Located at the top of the screen. Type a hymn number (e.g., \"23\") to jump directly to it, or type lyrics to search."
+    },
+
+    { "type": "heading-3", "text": "Navigation" },
+    {
+      "type": "text-block",
+      "text": "<strong>Turning Pages:</strong> Use the <em>Prev/Next</em> buttons at the bottom, or swipe left/right on the page."
+    },
+    {
+      "type": "text-block",
+      "text": "<strong>Quick Shortcuts:</strong> Use the bottom buttons (e.g., <em>Imibhedesho</em> / <em>Amaculo</em>) to jump between sections. These labels change based on the selected language."
+    },
+
+    { "type": "heading-3", "text": "Language" },
+    {
+      "type": "text-block",
+      "text": "<strong>Choose Language:</strong> Select your hymnal language using the Language option. Your choice is saved as <em>preferredLanguage</em> on this device."
+    },
+    {
+      "type": "text-block",
+      "text": "<strong>Note:</strong> When you switch languages, the hymnal opens from the beginning (Page 1)."
+    },
+
+    { "type": "heading-3", "text": "Settings" },
+    {
+      "type": "text-block",
+      "text": "<strong>Font Size:</strong> Tap the <em>(A+)</em> button to make text larger."
+    },
+    {
+      "type": "text-block",
+      "text": "<strong>Dark Mode:</strong> Tap the Moon icon (🌙) for night reading."
+    },
+
+    { "type": "heading-3", "text": "Mobile vs Desktop" },
+    {
+      "type": "text-block",
+      "text": "<strong>Desktop:</strong> Language, Dark Mode, and other controls are visible in the top bar."
+    },
+    {
+      "type": "text-block",
+      "text": "<strong>Mobile:</strong> Tap the menu (☰) to open controls like Language and Dark Mode. Tap <em>(✕)</em> to close the menu."
+    }
+  ]
+}
+,
   {
     "page": 3,
     "title": "ISALATHISO SEMIBHEDESHO",
