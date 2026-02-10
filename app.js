@@ -888,7 +888,7 @@ const FOOTER_SHORTCUTS = {
     leftLabel: "Liturgy",
     leftTarget: 3,
     rightLabel: "Hymns",
-    rightTarget: 200 // example — set to your real hymns start page
+    rightTarget: 200
   }
   // st: {...}
 };
