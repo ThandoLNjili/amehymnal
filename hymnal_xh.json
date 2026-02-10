@@ -503,11 +503,7 @@
       {
         "type": "responsive-reading",
         "number": "Mfu.",
-        "text": "Yivani okuthethwayo ngu Msindisi wethu:"
-      },
-      {
-        "type": "text-block",
-        "text": "Uyakumthanda u Yehova u Thixo wakho, ngayo yonke intliziyo yakho, nangawo wonke umphefumlo wakho, nangayo yonke ingqondo yakho; lo ngowokuqala nowona umkhulu umyalelo. Nowesibini ofana nawo: Uyakumthanda ummelwane wakho njengokuzithanda kwakho. Kulemiyalelo mibini kuxhomekeke wonke umthetho nabaprofite."
+        "text": "Yivani okuthethwayo ngu Msindisi wethu: Uyakumthanda u Yehova u Thixo wakho, ngayo yonke intliziyo yakho, nangawo wonke umphefumlo wakho, nangayo yonke ingqondo yakho; lo ngowokuqala nowona umkhulu umyalelo. Nowesibini ofana nawo: Uyakumthanda ummelwane wakho njengokuzithanda kwakho. Kulemiyalelo mibini kuxhomekeke wonke umthetho nabaprofite."
       },
       {
         "type": "responsive-reading",
@@ -609,7 +605,7 @@
       {
         "type": "responsive-reading",
         "number": "6.",
-        "text": "Izulu lizele kwa nomhalaba bubukhulu bobungcwalisa bako."
+        "text": "Izulu lizele kwa nomhlaba bubukhulu bobungcwalisa bako."
       },
       {
         "type": "responsive-reading",
@@ -671,7 +667,7 @@
       {
         "type": "responsive-reading",
         "number": "17.",
-        "text": "Uthe wakuba weyisile ubukhali bokufa: wavulela bonke abakholwayo ubukumkani bezulu."
+        "text": "Uthe wakuba weyisile ubukhali bokufa: wavulela bonke abakholwayo ubukumkani beZulu."
       },
       {
         "type": "responsive-reading",
@@ -1210,7 +1206,7 @@
     "content": [
       {
         "type": "text-block",
-        "text": "tlanganiso ukuba i-Nkosi yethu u Yesu Krestu ivume ukunamkela nokunithamsanqela, inikhulule ezonweni zenu ininike ubukumkani bezulu nobomi obungunaphakade njengokuba ne Nkosi yethu u Yesu Krestu ithembise ezwini layo elingcwele ngokuthi yena kwelodinga ngecala lakhe anyaniseke ukuligcina, nokulifeza."
+        "text": "tlanganiso ukuba i-Nkosi yethu u Yesu Krestu ivume ukunamkela nokunithamsanqela, inikhulule ezonweni zenu ininike ubukumkani beZulu nobomi obungunaphakade njengokuba ne Nkosi yethu u Yesu Krestu ithembise ezwini layo elingcwele ngokuthi yena kwelodinga ngecala lakhe anyaniseke ukuligcina, nokulifeza."
       },
       {
         "type": "text-block",
@@ -1385,7 +1381,7 @@
       },
       {
         "type": "text-block",
-        "text": "Asingabo bonke abathi kum, Nkosi! Nkosi! abayakungena ebukumkanini bezulu, ngabayenzayo, intando ka Bawo osezulwini kuphela. Mat. VII. 21."
+        "text": "Asingabo bonke abathi kum, Nkosi! Nkosi! abayakungena ebukumkanini beZulu, ngabayenzayo, intando ka Bawo osezulwini kuphela. Mat. VII. 21."
       },
       {
         "type": "text-block",
@@ -5138,7 +5134,7 @@
       {
         "type": "stanza",
         "lines": [
-          "WARAZULWA ngenxa yami.",
+          "WAKRAZULWA ngenxa yami.",
           "Liwa laphakade!",
           "Kuze ndizifihle Kuwe.",
           "Nxeba lika-Yesu!"
@@ -5174,7 +5170,7 @@
       {
         "type": "stanza",
         "lines": [
-          "5. Warazulwa ngenza yami,",
+          "5. Wakrazulwa ngenza yami,",
           "Liwa laphakade!",
           "Kuze ndizifihle Kuwe,",
           "Nxeba lika-Yesu! Amen."
@@ -10543,7 +10539,7 @@
       {
         "type": "stanza",
         "lines": [
-          "5. Kuba namhla ndenjenje, nje,",
+          "5. Kuba namhla ndinjenje, nje,",
           "Ndililolo apha;",
           "Ndandisiya nezihlwele,",
           "Kuyo indlu yakho."
@@ -11799,7 +11795,7 @@
         "lines": [
           "2. Maxa uzityila",
           "Kwaba bantu bakho",
-          "Bona wena Mfeli wam",
+          "Bona Wena Mfeli wam",
           "Uz' undikhumbule."
         ]
       },
@@ -12462,7 +12458,7 @@
           "3. Sithabath' isonka Yesu,",
           "Sikhangele kuwe;",
           "Sithabathe sidle sona,",
-          "Sikhumbule wena."
+          "Sikhumbule Wena."
         ]
       },
       {
@@ -12471,7 +12467,7 @@
           "4. Siyaphatha nalendebe,",
           "Sithembe kuwe;",
           "Siyasela kuyo sonke,",
-          "Sikhumbule wena. Amen."
+          "Sikhumbule Wena. Amen."
         ]
       }
     ]
@@ -12652,7 +12648,7 @@
         "lines": [
           "NKOSI namhla sikhumbula",
           "Okukufa kwakho",
-          "Wakwenzayo wena wedwa",
+          "Wakwenzayo Wena wedwa",
           "Xan' usithengayo."
         ]
       },
@@ -12735,7 +12731,7 @@
       {
         "type": "stanza",
         "lines": [
-          "2. Wathi wena Nkosi",
+          "2. Wathi Wena Nkosi",
           "Masibavumele",
           "Abantwana beze kuwe",
           "Ubasikelele."
@@ -12755,7 +12751,7 @@
         "lines": [
           "4. Zakuphehlelelwa",
           "Ngamanz' abonwayo",
-          "Zuziphehlelele wena",
+          "Zuziphehlelele Wena",
           "Nango Moya wakho."
         ]
       },
@@ -13066,7 +13062,7 @@
       {
         "type": "stanza",
         "lines": [
-          "SIBONGOZA wena Yesu,",
+          "SIBONGOZA Wena Yesu,",
           "Xa sihlangeneyo;",
           "Zusikhanyisele thina,",
           "Xa singaqondiyo."
@@ -13964,7 +13960,7 @@
         "type": "stanza",
         "lines": [
           "2. Ndasiva eso sandi,",
-          "Sabadala bezulu;",
+          "Sabadala beZulu;",
           "Kubongwa esimanga;",
           "Zabhabham' ingelosi,",
           "Ziphete izi thsaba;",
@@ -16297,7 +16293,7 @@
       },
       {
         "type": "toc-row",
-        "text": "Warazulwa ngenxa yami",
+        "text": "Wakrazulwa ngenxa yami",
         "author": "W. S. Davis",
         "target": 37,
         "isHymn": true,
