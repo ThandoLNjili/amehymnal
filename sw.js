@@ -1,6 +1,6 @@
-const CACHE_NAME = 'amec-hymnal-v1.0.1';
-const STATIC_CACHE = 'amec-hymnal-static-v1.0.1';
-const DATA_CACHE = 'amec-hymnal-data-v1.0.1';
+const CACHE_NAME = 'amec-hymnal-v1.0.2';
+const STATIC_CACHE = 'amec-hymnal-static-v1.0.2';
+const DATA_CACHE = 'amec-hymnal-data-v1.0.2';
 
 const STATIC_ASSETS = [
     './',
