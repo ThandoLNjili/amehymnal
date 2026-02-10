@@ -403,6 +403,28 @@ function performSearch() {
                             }
                         }
                     }
+                    // Check Headings
+                    else if (
+                        (block.type === 'heading-1' || block.type === 'heading-2' || block.type === 'heading-3') &&
+                        block.text && block.text.toLowerCase().includes(query)
+                    ) {
+                        matchFoundOnPage = true;
+                        matchScore = 6; // Medium score for heading matches
+                        const highlightedHeading = block.text.replace(new RegExp(`(${query})`, 'gi'), '<span class="search-highlight">$1</span>');
+                        mainLabel = highlightedHeading;
+                        snippet = `Liturgy Heading (Page ${page.page})`;
+                    }
+                    // Check Text Blocks
+                    // else if (
+                    //     block.type === 'text-block' &&
+                    //     block.text && block.text.toLowerCase().includes(query)
+                    // ) {
+                    //     matchFoundOnPage = true;
+                    //     matchScore = 5; // Medium score for text-block matches
+                    //     const highlightedText = block.text.replace(new RegExp(`(${query})`, 'gi'), '<span class="search-highlight">$1</span>');
+                    //     mainLabel = page.title;
+                    //     snippet = `"...${highlightedText}..."`;
+                    // }
                     // Check TOC Rows (for Index search) - includes author names
                     else if (block.type === 'toc-row') {
                         // Check title text
@@ -428,6 +450,17 @@ function performSearch() {
                         mainLabel = page.title;
                         const highlightedRubric = block.text.replace(new RegExp(`(${query})`, 'gi'), '<span class="search-highlight">$1</span>');
                         snippet = `Rubric: ${highlightedRubric}`;
+                    }
+                    else if (
+                        block.text && block.text.toLowerCase().includes(query)
+                    ) {
+                        matchFoundOnPage = true;
+                        matchScore = 5; // Adjust score as needed
+                        const highlightedText = block.text.replace(new RegExp(`(${query})`, 'gi'), '<span class="search-highlight">$1</span>');
+                        mainLabel = page.title;
+                        snippet = block.number
+                            ? `(${block.number}) "${highlightedText}"`
+                            : `"${highlightedText}"`;
                     }
                 }
             }
@@ -818,25 +851,25 @@ document.addEventListener('keydown', (e) => {
 });
 
 function updateFooterShortcuts(langCode) {
-  const leftBtn = document.getElementById("shortcut-left");
-  const rightBtn = document.getElementById("shortcut-right");
+    const leftBtn = document.getElementById("shortcut-left");
+    const rightBtn = document.getElementById("shortcut-right");
 
-  const cfg = FOOTER_SHORTCUTS[langCode];
+    const cfg = FOOTER_SHORTCUTS[langCode];
 
-  // Fallback: if language not configured yet, hide shortcuts or show defaults
-  if (!cfg) {
-    leftBtn.textContent = "Contents";
-    leftBtn.onclick = () => goToPage(1);
-    rightBtn.textContent = "Search";
-    rightBtn.onclick = () => document.getElementById("search-input")?.focus();
-    return;
-  }
+    // Fallback: if language not configured yet, hide shortcuts or show defaults
+    if (!cfg) {
+        leftBtn.textContent = "Contents";
+        leftBtn.onclick = () => goToPage(1);
+        rightBtn.textContent = "Search";
+        rightBtn.onclick = () => document.getElementById("search-input")?.focus();
+        return;
+    }
 
-  leftBtn.textContent = cfg.leftLabel;
-  leftBtn.onclick = () => goToPage(cfg.leftTarget);
+    leftBtn.textContent = cfg.leftLabel;
+    leftBtn.onclick = () => goToPage(cfg.leftTarget);
 
-  rightBtn.textContent = cfg.rightLabel;
-  rightBtn.onclick = () => goToPage(cfg.rightTarget);
+    rightBtn.textContent = cfg.rightLabel;
+    rightBtn.onclick = () => goToPage(cfg.rightTarget);
 }
 
 // --- Mobile hamburger menu logic ---
@@ -844,53 +877,53 @@ const menuToggleBtn = document.getElementById('menu-toggle');
 const navControls = document.getElementById('nav-controls');
 
 function setMenuOpen(isOpen) {
-  navControls.classList.toggle('open', isOpen);
-  menuToggleBtn.textContent = isOpen ? '✕' : '☰';
-  menuToggleBtn.setAttribute('aria-expanded', String(isOpen));
+    navControls.classList.toggle('open', isOpen);
+    menuToggleBtn.textContent = isOpen ? '✕' : '☰';
+    menuToggleBtn.setAttribute('aria-expanded', String(isOpen));
 }
 
 if (menuToggleBtn && navControls) {
-  menuToggleBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    const isOpen = navControls.classList.contains('open');
-    setMenuOpen(!isOpen);
-  });
+    menuToggleBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = navControls.classList.contains('open');
+        setMenuOpen(!isOpen);
+    });
 
-  // Close when tapping outside
-  document.addEventListener('click', (e) => {
-    if (!navControls.classList.contains('open')) return;
-    if (e.target.closest('#nav-controls') || e.target.closest('#menu-toggle')) return;
-    setMenuOpen(false);
-  });
+    // Close when tapping outside
+    document.addEventListener('click', (e) => {
+        if (!navControls.classList.contains('open')) return;
+        if (e.target.closest('#nav-controls') || e.target.closest('#menu-toggle')) return;
+        setMenuOpen(false);
+    });
 
-  // Close after choosing language (nice UX)
-  const languageSelect = document.getElementById('language-select');
-  if (languageSelect) {
-    languageSelect.addEventListener('change', () => setMenuOpen(false));
-  }
+    // Close after choosing language (nice UX)
+    const languageSelect = document.getElementById('language-select');
+    if (languageSelect) {
+        languageSelect.addEventListener('change', () => setMenuOpen(false));
+    }
 
-  // If user rotates / resizes to desktop, force menu closed
-  window.addEventListener('resize', () => {
-    if (window.innerWidth > 480) setMenuOpen(false);
-  });
+    // If user rotates / resizes to desktop, force menu closed
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 480) setMenuOpen(false);
+    });
 }
 
 
 
 const FOOTER_SHORTCUTS = {
-  xh: {
-    leftLabel: "Imibhedesho",
-    leftTarget: 3,
-    rightLabel: "Amaculo",
-    rightTarget: 285
-  },
-  en: {
-    leftLabel: "Liturgy",
-    leftTarget: 3,
-    rightLabel: "Hymns",
-    rightTarget: 200
-  }
-  // st: {...}
+    xh: {
+        leftLabel: "Imibhedesho",
+        leftTarget: 3,
+        rightLabel: "Amaculo",
+        rightTarget: 285
+    },
+    en: {
+        leftLabel: "Liturgy",
+        leftTarget: 3,
+        rightLabel: "Hymns",
+        rightTarget: 200
+    }
+    // st: {...}
 };
 
 // Load preferences on app start
