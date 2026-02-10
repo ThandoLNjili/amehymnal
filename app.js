@@ -1,7 +1,16 @@
 // Initialization & State
 let hymnalData = [];
-let currentPage = 3; // Start at the Table of Contents
+let currentPage = 1;
 let maxPage = 0;
+
+const LANGUAGES = [
+    { code: "af", label: "Afrikaans" },
+    { code: "en", label: "English" },
+    { code: "st", label: "Sesotho" },
+    { code: "xh", label: "IsiXhosa" }
+].sort((a, b) => a.label.localeCompare(b.label));
+
+const LANGUAGE_KEY = "amec-hymnal-language";
 
 // Load saved page preference
 const savedPage = localStorage.getItem('amec-hymnal-current-page');
@@ -9,34 +18,77 @@ if (savedPage) {
     currentPage = parseInt(savedPage) || 3;
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+    setupLanguageDropdown();
+
+    const savedLang = localStorage.getItem(LANGUAGE_KEY);
+
+    if (savedLang) {
+        loadLanguage(savedLang);
+    } else {
+        showLanguagePrompt();
+    }
+});
+
 // Fetch Data
-fetch('hymnal_data.json')
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
-    })
-    .then(data => {
-        hymnalData = data;
+function loadLanguage(langCode) {
+    const select = document.getElementById("language-select");
+    select.value = langCode;
 
-        // Calculate the highest page number in the file
-        if (hymnalData.length > 0) {
+    const file = `hymnal_${langCode}.json`;
+
+    fetch(file)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Failed to load hymnal");
+            }
+            return response.json();
+        })
+        .then(data => {
+            hymnalData = data;
             maxPage = Math.max(...hymnalData.map(p => p.page));
-        }
 
-        renderPage(currentPage);
-    })
-    .catch(err => {
-        console.error("Error loading data:", err);
+            updateFooterShortcuts(langCode);
+            currentPage = 1; // ALWAYS start at Dedication
+            renderPage(currentPage);
+        })
+        .catch(err => {
+            console.error(err);
+            showErrorMessage("Unable to load hymnal language.");
+        });
+}
 
-        // Check if we're offline
-        if (!navigator.onLine) {
-            showOfflineMessage();
-        } else {
-            showErrorMessage("Failed to load hymnal data. Please check your connection and try again.");
-        }
+
+function setupLanguageDropdown() {
+    const select = document.getElementById("language-select");
+
+    LANGUAGES.forEach(lang => {
+        const option = document.createElement("option");
+        option.value = lang.code;
+        option.textContent = lang.label;
+        select.appendChild(option);
     });
+
+    select.addEventListener("change", () => {
+        if (!select.value) return;
+
+        localStorage.setItem(LANGUAGE_KEY, select.value);
+        loadLanguage(select.value);
+    });
+}
+
+function showLanguagePrompt() {
+    const contentArea = document.getElementById("content-area");
+    contentArea.innerHTML = `
+    <div style="margin-top:60px">
+      <h2>Choose Hymnal Language</h2>
+      <p>Please select a language from the top menu to begin.</p>
+      <p><strong>On mobile:</strong> Tap the menu (☰) in the top bar and open the language option.</p>
+      <p><strong>On desktop:</strong> Use the language option in the top bar.</p>
+    </div>
+  `;
+}
+
 
 // Offline message function
 function showOfflineMessage() {
@@ -351,6 +403,28 @@ function performSearch() {
                             }
                         }
                     }
+                    // Check Headings
+                    else if (
+                        (block.type === 'heading-1' || block.type === 'heading-2' || block.type === 'heading-3') &&
+                        block.text && block.text.toLowerCase().includes(query)
+                    ) {
+                        matchFoundOnPage = true;
+                        matchScore = 6; // Medium score for heading matches
+                        const highlightedHeading = block.text.replace(new RegExp(`(${query})`, 'gi'), '<span class="search-highlight">$1</span>');
+                        mainLabel = highlightedHeading;
+                        snippet = `Liturgy Heading (Page ${page.page})`;
+                    }
+                    // Check Text Blocks
+                    // else if (
+                    //     block.type === 'text-block' &&
+                    //     block.text && block.text.toLowerCase().includes(query)
+                    // ) {
+                    //     matchFoundOnPage = true;
+                    //     matchScore = 5; // Medium score for text-block matches
+                    //     const highlightedText = block.text.replace(new RegExp(`(${query})`, 'gi'), '<span class="search-highlight">$1</span>');
+                    //     mainLabel = page.title;
+                    //     snippet = `"...${highlightedText}..."`;
+                    // }
                     // Check TOC Rows (for Index search) - includes author names
                     else if (block.type === 'toc-row') {
                         // Check title text
@@ -376,6 +450,17 @@ function performSearch() {
                         mainLabel = page.title;
                         const highlightedRubric = block.text.replace(new RegExp(`(${query})`, 'gi'), '<span class="search-highlight">$1</span>');
                         snippet = `Rubric: ${highlightedRubric}`;
+                    }
+                    else if (
+                        block.text && block.text.toLowerCase().includes(query)
+                    ) {
+                        matchFoundOnPage = true;
+                        matchScore = 5; // Adjust score as needed
+                        const highlightedText = block.text.replace(new RegExp(`(${query})`, 'gi'), '<span class="search-highlight">$1</span>');
+                        mainLabel = page.title;
+                        snippet = block.number
+                            ? `(${block.number}) "${highlightedText}"`
+                            : `"${highlightedText}"`;
                     }
                 }
             }
@@ -765,7 +850,81 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// Load Preferences
+function updateFooterShortcuts(langCode) {
+    const leftBtn = document.getElementById("shortcut-left");
+    const rightBtn = document.getElementById("shortcut-right");
+
+    const cfg = FOOTER_SHORTCUTS[langCode];
+
+    // Fallback: if language not configured yet, hide shortcuts or show defaults
+    if (!cfg) {
+        leftBtn.textContent = "Contents";
+        leftBtn.onclick = () => goToPage(1);
+        rightBtn.textContent = "Search";
+        rightBtn.onclick = () => document.getElementById("search-input")?.focus();
+        return;
+    }
+
+    leftBtn.textContent = cfg.leftLabel;
+    leftBtn.onclick = () => goToPage(cfg.leftTarget);
+
+    rightBtn.textContent = cfg.rightLabel;
+    rightBtn.onclick = () => goToPage(cfg.rightTarget);
+}
+
+// --- Mobile hamburger menu logic ---
+const menuToggleBtn = document.getElementById('menu-toggle');
+const navControls = document.getElementById('nav-controls');
+
+function setMenuOpen(isOpen) {
+    navControls.classList.toggle('open', isOpen);
+    menuToggleBtn.textContent = isOpen ? '✕' : '☰';
+    menuToggleBtn.setAttribute('aria-expanded', String(isOpen));
+}
+
+if (menuToggleBtn && navControls) {
+    menuToggleBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = navControls.classList.contains('open');
+        setMenuOpen(!isOpen);
+    });
+
+    // Close when tapping outside
+    document.addEventListener('click', (e) => {
+        if (!navControls.classList.contains('open')) return;
+        if (e.target.closest('#nav-controls') || e.target.closest('#menu-toggle')) return;
+        setMenuOpen(false);
+    });
+
+    // Close after choosing language (nice UX)
+    const languageSelect = document.getElementById('language-select');
+    if (languageSelect) {
+        languageSelect.addEventListener('change', () => setMenuOpen(false));
+    }
+
+    // If user rotates / resizes to desktop, force menu closed
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 480) setMenuOpen(false);
+    });
+}
+
+
+
+const FOOTER_SHORTCUTS = {
+    xh: {
+        leftLabel: "Imibhedesho",
+        leftTarget: 3,
+        rightLabel: "Amaculo",
+        rightTarget: 285
+    },
+    en: {
+        leftLabel: "Liturgy",
+        leftTarget: 3,
+        rightLabel: "Hymns",
+        rightTarget: 200
+    }
+    // st: {...}
+};
 
 // Load preferences on app start
 loadThemePreference();

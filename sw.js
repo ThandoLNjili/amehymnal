@@ -1,6 +1,6 @@
-const CACHE_NAME = 'amec-hymnal-v17'; // Version to force cache refresh
-const STATIC_CACHE = 'amec-hymnal-static-v17';
-const DATA_CACHE = 'amec-hymnal-data-v17';
+const CACHE_NAME = 'amec-hymnal-v1.0.1';
+const STATIC_CACHE = 'amec-hymnal-static-v1.0.1';
+const DATA_CACHE = 'amec-hymnal-data-v1.0.1';
 
 const STATIC_ASSETS = [
     './',
@@ -16,7 +16,8 @@ const STATIC_ASSETS = [
 ];
 
 const DATA_ASSETS = [
-    './hymnal_data.json'
+    './hymnal_xh.json',
+    './hymnal_en.json'
 ];
 
 // Install event - cache static assets

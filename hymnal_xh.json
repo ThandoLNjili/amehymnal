@@ -22,47 +22,59 @@
     ]
   },
   {
-    "page": 2,
-    "title": "User Guide",
-    "content": [
-      {
-        "type": "heading-1",
-        "text": "How to Use This App"
-      },
-      {
-        "type": "heading-3",
-        "text": "Finding a Hymn"
-      },
-      {
-        "type": "text-block",
-        "text": "<strong>Search Bar:</strong> Located at the top of the screen. Type a hymn number (e.g., \"23\") to jump directly to it, or type lyrics to search."
-      },
-      {
-        "type": "heading-3",
-        "text": "Navigation"
-      },
-      {
-        "type": "text-block",
-        "text": "<strong>Turning Pages:</strong> Use the <em>Prev/Next</em> buttons at the bottom, or simply swipe your finger left or right on the screen."
-      },
-      {
-        "type": "text-block",
-        "text": "<strong>Quick Shortcuts:</strong> At the very bottom, tap <em>Imibhedesho</em> to go to the Liturgy or <em>Amaculo</em> to jump to Hymn 1."
-      },
-      {
-        "type": "heading-3",
-        "text": "Settings"
-      },
-      {
-        "type": "text-block",
-        "text": "<strong>Dark Mode:</strong> Tap the Moon icon (🌙) in the top right corner for night reading."
-      },
-      {
-        "type": "text-block",
-        "text": "<strong>Font Size:</strong> Tap the (A+) icon in the top right to make the text larger."
-      }
-    ]
-  },
+  "page": 2,
+  "title": "User Guide",
+  "content": [
+    { "type": "heading-1", "text": "How to Use This App" },
+
+    { "type": "heading-3", "text": "Finding a Hymn" },
+    {
+      "type": "text-block",
+      "text": "<strong>Search Bar:</strong> Located at the top of the screen. Type a hymn number (e.g., \"23\") to jump directly to it, or type lyrics to search."
+    },
+
+    { "type": "heading-3", "text": "Navigation" },
+    {
+      "type": "text-block",
+      "text": "<strong>Turning Pages:</strong> Use the <em>Prev/Next</em> buttons at the bottom, or swipe left/right on the page."
+    },
+    {
+      "type": "text-block",
+      "text": "<strong>Quick Shortcuts:</strong> Use the bottom buttons (e.g., <em>Imibhedesho</em> / <em>Amaculo</em>) to jump between sections. These labels change based on the selected language."
+    },
+
+    { "type": "heading-3", "text": "Language" },
+    {
+      "type": "text-block",
+      "text": "<strong>Choose Language:</strong> Select your hymnal language using the Language option. Your choice is saved as <em>preferredLanguage</em> on this device."
+    },
+    {
+      "type": "text-block",
+      "text": "<strong>Note:</strong> When you switch languages, the hymnal opens from the beginning (Page 1)."
+    },
+
+    { "type": "heading-3", "text": "Settings" },
+    {
+      "type": "text-block",
+      "text": "<strong>Font Size:</strong> Tap the <em>(A+)</em> button to make text larger."
+    },
+    {
+      "type": "text-block",
+      "text": "<strong>Dark Mode:</strong> Tap the Moon icon (🌙) for night reading."
+    },
+
+    { "type": "heading-3", "text": "Mobile vs Desktop" },
+    {
+      "type": "text-block",
+      "text": "<strong>Desktop:</strong> Language, Dark Mode, and other controls are visible in the top bar."
+    },
+    {
+      "type": "text-block",
+      "text": "<strong>Mobile:</strong> Tap the menu (☰) to open controls like Language and Dark Mode. Tap <em>(✕)</em> to close the menu."
+    }
+  ]
+}
+,
   {
     "page": 3,
     "title": "ISALATHISO SEMIBHEDESHO",
@@ -135,7 +147,7 @@
       {
         "type": "toc-row",
         "number": "11.",
-        "text": "Inkonzo yelitye lengcwaba",
+        "text": "Izahluko Zamaculo",
         "target": 90
       }
     ]
@@ -241,7 +253,7 @@
   },
   {
     "page": 6,
-    "title": "Inkonzo Yakusasa (Cont.)",
+    "title": "Inkonzo Yakusasa",
     "category": "Liturgy",
     "content": [
       {
@@ -290,7 +302,7 @@
   },
   {
     "page": 7,
-    "title": "Inkonzo Yakusasa (Cont.)",
+    "title": "Inkonzo Yakusasa",
     "category": "Liturgy",
     "content": [
       {
@@ -309,7 +321,7 @@
   },
   {
     "page": 8,
-    "title": "Inkonzo Yakusasa (Cont.)",
+    "title": "Inkonzo Yakusasa",
     "category": "Liturgy",
     "content": [
       {
@@ -405,7 +417,7 @@
   },
   {
     "page": 10,
-    "title": "Imithetho Elishumi (Cont.)",
+    "title": "Imithetho Elishumi",
     "category": "Liturgy",
     "content": [
       {
@@ -446,7 +458,7 @@
   },
   {
     "page": 11,
-    "title": "Imithetho Elishumi (Cont.)",
+    "title": "Imithetho Elishumi",
     "category": "Liturgy",
     "content": [
       {
@@ -491,11 +503,7 @@
       {
         "type": "responsive-reading",
         "number": "Mfu.",
-        "text": "Yivani okuthethwayo ngu Msindisi wethu:"
-      },
-      {
-        "type": "text-block",
-        "text": "Uyakumthanda u Yehova u Thixo wakho, ngayo yonke intliziyo yakho, nangawo wonke umphefumlo wakho, nangayo yonke ingqondo yakho; lo ngowokuqala nowona umkhulu umyalelo. Nowesibini ofana nawo: Uyakumthanda ummelwane wakho njengokuzithanda kwakho. Kulemiyalelo mibini kuxhomekeke wonke umthetho nabaprofite."
+        "text": "Yivani okuthethwayo ngu Msindisi wethu: Uyakumthanda u Yehova u Thixo wakho, ngayo yonke intliziyo yakho, nangawo wonke umphefumlo wakho, nangayo yonke ingqondo yakho; lo ngowokuqala nowona umkhulu umyalelo. Nowesibini ofana nawo: Uyakumthanda ummelwane wakho njengokuzithanda kwakho. Kulemiyalelo mibini kuxhomekeke wonke umthetho nabaprofite."
       },
       {
         "type": "responsive-reading",
@@ -506,7 +514,7 @@
   },
   {
     "page": 12,
-    "title": "Inkonzo Yakusasa (Cont.)",
+    "title": "Isivumo se Nkolo Yabapostile",
     "category": "Liturgy",
     "content": [
       {
@@ -554,7 +562,7 @@
   },
   {
     "page": 13,
-    "title": "Kwenziwe Ufefe",
+    "title": "Siyakudumisa",
     "category": "Liturgy",
     "content": [
       {
@@ -597,7 +605,7 @@
       {
         "type": "responsive-reading",
         "number": "6.",
-        "text": "Izulu lizele kwa nomhalaba bubukhulu bobungcwalisa bako."
+        "text": "Izulu lizele kwa nomhlaba bubukhulu bobungcwalisa bako."
       },
       {
         "type": "responsive-reading",
@@ -618,7 +626,7 @@
   },
   {
     "page": 14,
-    "title": "Siyakudumisa (Cont.)",
+    "title": "Siyakudumisa",
     "category": "Liturgy",
     "content": [
       {
@@ -659,7 +667,7 @@
       {
         "type": "responsive-reading",
         "number": "17.",
-        "text": "Uthe wakuba weyisile ubukhali bokufa: wavulela bonke abakholwayo ubukumkani bezulu."
+        "text": "Uthe wakuba weyisile ubukhali bokufa: wavulela bonke abakholwayo ubukumkani beZulu."
       },
       {
         "type": "responsive-reading",
@@ -695,7 +703,7 @@
   },
   {
     "page": 15,
-    "title": "Siyakudumisa (Cont.)",
+    "title": "Siyakudumisa",
     "category": "Liturgy",
     "content": [
       {
@@ -750,7 +758,7 @@
   },
   {
     "page": 16,
-    "title": "Magnificat (Cont.) & Prayers",
+    "title": "Magnificat & Prayers",
     "category": "Liturgy",
     "content": [
       {
@@ -837,7 +845,7 @@
   },
   {
     "page": 18,
-    "title": "Umthandazo Woxolo (Cont.)",
+    "title": "Umthandazo Woxolo",
     "category": "Liturgy",
     "content": [
       {
@@ -961,7 +969,7 @@
   },
   {
     "page": 22,
-    "title": "Baptism (Cont.)",
+    "title": "Inkonzo Yobaptizesho Lwentsana",
     "category": "Liturgy",
     "content": [
       {
@@ -988,7 +996,7 @@
   },
   {
     "page": 23,
-    "title": "Baptism (Cont.)",
+    "title": "Inkonzo Yobaptizesho Lwentsana",
     "category": "Liturgy",
     "content": [
       {
@@ -1019,7 +1027,7 @@
   },
   {
     "page": 24,
-    "title": "Baptism (Cont.)",
+    "title": "Inkonzo Yobaptizesho Lwentsana",
     "category": "Liturgy",
     "content": [
       {
@@ -1038,7 +1046,7 @@
   },
   {
     "page": 25,
-    "title": "Baptism (Cont.)",
+    "title": "Inkonzo Yobaptizesho Lwentsana",
     "category": "Liturgy",
     "content": [
       {
@@ -1073,7 +1081,7 @@
   },
   {
     "page": 26,
-    "title": "Baptism (Infant) End",
+    "title": "Inkonzo Yobaptizesho Lwentsana",
     "category": "Liturgy",
     "content": [
       {
@@ -1143,7 +1151,7 @@
   },
   {
     "page": 28,
-    "title": "Baptism (Adult) Cont.",
+    "title": "Inkonzo Yobaptizesho Lwabadala",
     "category": "Liturgy",
     "content": [
       {
@@ -1170,7 +1178,7 @@
   },
   {
     "page": 29,
-    "title": "Baptism (Adult) Cont.",
+    "title": "Inkonzo Yobaptizesho Lwabadala",
     "category": "Liturgy",
     "content": [
       {
@@ -1193,12 +1201,12 @@
   },
   {
     "page": 30,
-    "title": "Baptism (Adult) Cont.",
+    "title": "Inkonzo Yobaptizesho Lwabadala",
     "category": "Liturgy",
     "content": [
       {
         "type": "text-block",
-        "text": "tlanganiso ukuba i-Nkosi yethu u Yesu Krestu ivume ukunamkela nokunithamsanqela, inikhulule ezonweni zenu ininike ubukumkani bezulu nobomi obungunaphakade njengokuba ne Nkosi yethu u Yesu Krestu ithembise ezwini layo elingcwele ngokuthi yena kwelodinga ngecala lakhe anyaniseke ukuligcina, nokulifeza."
+        "text": "tlanganiso ukuba i-Nkosi yethu u Yesu Krestu ivume ukunamkela nokunithamsanqela, inikhulule ezonweni zenu ininike ubukumkani beZulu nobomi obungunaphakade njengokuba ne Nkosi yethu u Yesu Krestu ithembise ezwini layo elingcwele ngokuthi yena kwelodinga ngecala lakhe anyaniseke ukuligcina, nokulifeza."
       },
       {
         "type": "text-block",
@@ -1224,7 +1232,7 @@
   },
   {
     "page": 31,
-    "title": "Baptism (Adult) Cont.",
+    "title": "Inkonzo Yobaptizesho Lwabadala",
     "category": "Liturgy",
     "content": [
       {
@@ -1263,7 +1271,7 @@
   },
   {
     "page": 32,
-    "title": "Baptism (Adult) Cont.",
+    "title": "Inkonzo Yobaptizesho Lwabadala",
     "category": "Liturgy",
     "content": [
       {
@@ -1294,7 +1302,7 @@
   },
   {
     "page": 33,
-    "title": "Baptism (Adult) End",
+    "title": "Inkonzo Yobaptizesho Lwabadala",
     "category": "Liturgy",
     "content": [
       {
@@ -1364,7 +1372,7 @@
   },
   {
     "page": 35,
-    "title": "Communion (Readings)",
+    "title": "Inkonzo Yomthendeleko",
     "category": "Liturgy",
     "content": [
       {
@@ -1373,7 +1381,7 @@
       },
       {
         "type": "text-block",
-        "text": "Asingabo bonke abathi kum, Nkosi! Nkosi! abayakungena ebukumkanini bezulu, ngabayenzayo, intando ka Bawo osezulwini kuphela. Mat. VII. 21."
+        "text": "Asingabo bonke abathi kum, Nkosi! Nkosi! abayakungena ebukumkanini beZulu, ngabayenzayo, intando ka Bawo osezulwini kuphela. Mat. VII. 21."
       },
       {
         "type": "text-block",
@@ -1399,7 +1407,7 @@
   },
   {
     "page": 36,
-    "title": "Communion (Offertory)",
+    "title": "Inkonzo Yomthendeleko",
     "category": "Liturgy",
     "content": [
       {
@@ -1438,7 +1446,7 @@
   },
   {
     "page": 37,
-    "title": "Communion (Confession)",
+    "title": "Inkonzo Yomthendeleko",
     "category": "Liturgy",
     "content": [
       {
@@ -1469,7 +1477,7 @@
   },
   {
     "page": 38,
-    "title": "Communion (Absolution)",
+    "title": "Inkonzo Yomthendeleko",
     "category": "Liturgy",
     "content": [
       {
@@ -1516,7 +1524,7 @@
   },
   {
     "page": 39,
-    "title": "Communion (Sanctus)",
+    "title": "Inkonzo Yomthendeleko",
     "category": "Liturgy",
     "content": [
       {
@@ -1547,7 +1555,7 @@
   },
   {
     "page": 40,
-    "title": "Communion (Consecration)",
+    "title": "Inkonzo Yomthendeleko",
     "category": "Liturgy",
     "content": [
       {
@@ -1558,7 +1566,7 @@
   },
   {
     "page": 41,
-    "title": "Communion (Administration)",
+    "title": "Inkonzo Yomthendeleko",
     "category": "Liturgy",
     "content": [
       {
@@ -1589,7 +1597,7 @@
   },
   {
     "page": 42,
-    "title": "Communion (End)",
+    "title": "Inkonzo Yomthendeleko",
     "category": "Liturgy",
     "content": [
       {
@@ -1620,7 +1628,7 @@
   },
   {
     "page": 43,
-    "title": "Communion (Thanksgiving)",
+    "title": "Inkonzo Yomthendeleko",
     "category": "Liturgy",
     "content": [
       {
@@ -1647,7 +1655,7 @@
   },
   {
     "page": 44,
-    "title": "Communion (Benediction)",
+    "title": "Inkonzo Yomthendeleko",
     "category": "Liturgy",
     "content": [
       {
@@ -1701,7 +1709,7 @@
   },
   {
     "page": 46,
-    "title": "Reception of Members (Cont.)",
+    "title": "Inkonzo Yokuzaliswa Kwamalungu",
     "category": "Liturgy",
     "content": [
       {
@@ -1724,7 +1732,7 @@
   },
   {
     "page": 47,
-    "title": "Reception of Members (Cont.)",
+    "title": "Inkonzo Yokuzaliswa Kwamalungu",
     "category": "Liturgy",
     "content": [
       {
@@ -1759,7 +1767,7 @@
   },
   {
     "page": 48,
-    "title": "Reception of Members (End)",
+    "title": "Inkonzo Yokuzaliswa Kwamalungu",
     "category": "Liturgy",
     "content": [
       {
@@ -1831,7 +1839,7 @@
   },
   {
     "page": 49,
-    "title": "Reception of Members (Prayer)",
+    "title": "Inkonzo Yokuzaliswa Kwamalungu",
     "category": "Liturgy",
     "content": [
       {
@@ -1889,7 +1897,7 @@
   },
   {
     "page": 51,
-    "title": "Marriage Service (Cont.)",
+    "title": "Inkonzo Yomtshato",
     "category": "Liturgy",
     "content": [
       {
@@ -1916,7 +1924,7 @@
   },
   {
     "page": 52,
-    "title": "Marriage Service (Declaration)",
+    "title": "Inkonzo Yomtshato",
     "category": "Liturgy",
     "content": [
       {
@@ -1955,7 +1963,7 @@
   },
   {
     "page": 53,
-    "title": "Marriage Service (Vows)",
+    "title": "Inkonzo Yomtshato",
     "category": "Liturgy",
     "content": [
       {
@@ -1990,7 +1998,7 @@
   },
   {
     "page": 54,
-    "title": "Marriage Service (Rings)",
+    "title": "Inkonzo Yomtshato",
     "category": "Liturgy",
     "content": [
       {
@@ -2017,7 +2025,7 @@
   },
   {
     "page": 55,
-    "title": "Marriage Service (End)",
+    "title": "Inkonzo Yomtshato",
     "category": "Liturgy",
     "content": [
       {
@@ -2052,7 +2060,7 @@
   },
   {
     "page": 56,
-    "title": "Marriage Service (End)",
+    "title": "Inkonzo Yomtshato",
     "category": "Liturgy",
     "content": [
       {
@@ -2075,7 +2083,7 @@
   },
   {
     "page": 57,
-    "title": "Marriage Service (Benediction)",
+    "title": "Inkonzo Yomtshato",
     "category": "Liturgy",
     "content": [
       {
@@ -2098,12 +2106,12 @@
   },
   {
     "page": 58,
-    "title": "Inkonzo Yokungcwaba Abadala",
+    "title": "Inkonzo Yokungcwaba",
     "category": "Liturgy",
     "content": [
       {
         "type": "heading-1",
-        "text": "Inkonzo Yokungcwaba Abadala"
+        "text": "Inkonzo Yokungcwaba"
       },
       {
         "type": "rubric",
@@ -2133,7 +2141,7 @@
   },
   {
     "page": 59,
-    "title": "Funeral Service (Psalm)",
+    "title": "Inkonzo Yokungcwaba",
     "category": "Liturgy",
     "content": [
       {
@@ -2148,7 +2156,7 @@
   },
   {
     "page": 60,
-    "title": "Funeral Service (Lesson)",
+    "title": "Inkonzo Yokungcwaba",
     "category": "Liturgy",
     "content": [
       {
@@ -2183,7 +2191,7 @@
   },
   {
     "page": 61,
-    "title": "Funeral Service (Committal)",
+    "title": "Inkonzo Yokungcwaba",
     "category": "Liturgy",
     "content": [
       {
@@ -2210,7 +2218,7 @@
   },
   {
     "page": 62,
-    "title": "Funeral Service (Prayers)",
+    "title": "Inkonzo Yokungcwaba",
     "category": "Liturgy",
     "content": [
       {
@@ -2252,7 +2260,7 @@
   },
   {
     "page": 63,
-    "title": "Funeral Service (Readings)",
+    "title": "Inkonzo Yokungcwaba",
     "category": "Liturgy",
     "content": [
       {
@@ -2283,7 +2291,7 @@
   },
   {
     "page": 64,
-    "title": "Funeral Service (Job)",
+    "title": "Inkonzo Yokungcwaba",
     "category": "Liturgy",
     "content": [
       {
@@ -2306,7 +2314,7 @@
   },
   {
     "page": 65,
-    "title": "Funeral Service (Psalm 90)",
+    "title": "Inkonzo Yokungcwaba",
     "category": "Liturgy",
     "content": [
       {
@@ -2337,7 +2345,7 @@
   },
   {
     "page": 66,
-    "title": "Funeral Service (Corinthians)",
+    "title": "Inkonzo Yokungcwaba",
     "category": "Liturgy",
     "content": [
       {
@@ -2356,7 +2364,7 @@
   },
   {
     "page": 67,
-    "title": "Funeral Service (Corinthians Cont.)",
+    "title": "Inkonzo Yokungcwaba",
     "category": "Liturgy",
     "content": [
       {
@@ -2371,7 +2379,7 @@
   },
   {
     "page": 68,
-    "title": "Ukufa Komntwana",
+    "title": "Inkonzo Yokungcwaba",
     "category": "Liturgy",
     "content": [
       {
@@ -2394,7 +2402,7 @@
   },
   {
     "page": 69,
-    "title": "Ukufa Komntwana (Cont.)",
+    "title": "Inkonzo Yokungcwaba",
     "category": "Liturgy",
     "content": [
       {
@@ -2405,7 +2413,7 @@
   },
   {
     "page": 70,
-    "title": "Ukufa Komntwana (Cont.)",
+    "title": "Inkonzo Yokungcwaba",
     "category": "Liturgy",
     "content": [
       {
@@ -2428,7 +2436,7 @@
   },
   {
     "page": 71,
-    "title": "Ukufa Komntwana & Abalele Kukufa",
+    "title": "Inkonzo Yokungcwaba",
     "category": "Liturgy",
     "content": [
       {
@@ -2470,7 +2478,7 @@
   },
   {
     "page": 73,
-    "title": "Laying Foundation Stone (Cont.)",
+    "title": "Inkonzo Yokubekwa kwe Litye",
     "category": "Liturgy",
     "content": [
       {
@@ -2497,7 +2505,7 @@
   },
   {
     "page": 74,
-    "title": "Laying Foundation Stone (Cont.)",
+    "title": "Inkonzo Yokubekwa kwe Litye",
     "category": "Liturgy",
     "content": [
       {
@@ -2516,7 +2524,7 @@
   },
   {
     "page": 75,
-    "title": "Laying Foundation Stone (Cont.)",
+    "title": "Inkonzo Yokubekwa kwe Litye",
     "category": "Liturgy",
     "content": [
       {
@@ -2531,7 +2539,7 @@
   },
   {
     "page": 76,
-    "title": "Laying Foundation Stone (Cont.)",
+    "title": "Inkonzo Yokubekwa kwe Litye",
     "category": "Liturgy",
     "content": [
       {
@@ -2546,7 +2554,7 @@
   },
   {
     "page": 77,
-    "title": "Laying Foundation Stone (Prayer)",
+    "title": "Inkonzo Yokubekwa kwe Litye",
     "category": "Liturgy",
     "content": [
       {
@@ -2569,7 +2577,7 @@
   },
   {
     "page": 78,
-    "title": "Laying Foundation Stone (Prayer Cont.)",
+    "title": "Inkonzo Yokubekwa kwe Litye",
     "category": "Liturgy",
     "content": [
       {
@@ -2580,7 +2588,7 @@
   },
   {
     "page": 79,
-    "title": "Laying Foundation Stone (End)",
+    "title": "Inkonzo Yokubekwa kwe Litye",
     "category": "Liturgy",
     "content": [
       {
@@ -2599,7 +2607,7 @@
   },
   {
     "page": 80,
-    "title": "Inkonzo Yokuvulwa Kwendlu Ye Cawa",
+    "title": "Inkonzo Yokuvulwa Kwe ndlu",
     "category": "Liturgy",
     "content": [
       {
@@ -2622,7 +2630,7 @@
   },
   {
     "page": 81,
-    "title": "Inkonzo Yokuvulwa (Ps 34)",
+    "title": "Inkonzo Yokuvulwa Kwe ndlu",
     "category": "Liturgy",
     "content": [
       {
@@ -2678,7 +2686,7 @@
   },
   {
     "page": 82,
-    "title": "Inkonzo Yokuvulwa (Ps 122)",
+    "title": "Inkonzo Yokuvulwa Kwe ndlu",
     "category": "Liturgy",
     "content": [
       {
@@ -2711,7 +2719,7 @@
   },
   {
     "page": 83,
-    "title": "Umthandazo ka Soloman",
+    "title": "Inkonzo Yokuvulwa Kwe ndlu",
     "category": "Liturgy",
     "content": [
       {
@@ -2734,7 +2742,7 @@
   },
   {
     "page": 84,
-    "title": "Umthandazo ka Soloman (Cont.)",
+    "title": "Inkonzo Yokuvulwa Kwe ndlu",
     "category": "Liturgy",
     "content": [
       {
@@ -2745,7 +2753,7 @@
   },
   {
     "page": 85,
-    "title": "Umthandazo ka Soloman (Cont.)",
+    "title": "Inkonzo Yokuvulwa Kwe ndlu",
     "category": "Liturgy",
     "content": [
       {
@@ -2756,7 +2764,7 @@
   },
   {
     "page": 86,
-    "title": "Dedication Prayer",
+    "title": "Inkonzo Yokuvulwa Kwe ndlu",
     "category": "Liturgy",
     "content": [
       {
@@ -2771,7 +2779,7 @@
   },
   {
     "page": 87,
-    "title": "Dedication Prayer (Cont.)",
+    "title": "Inkonzo Yokuvulwa Kwe ndlu",
     "category": "Liturgy",
     "content": [
       {
@@ -2790,7 +2798,7 @@
   },
   {
     "page": 88,
-    "title": "Dedication Prayer (End)",
+    "title": "Inkonzo Yokuvulwa Kwe ndlu",
     "category": "Liturgy",
     "content": [
       {
@@ -2809,7 +2817,7 @@
   },
   {
     "page": 89,
-    "title": "Inkonzo Yokuvulwa (Opening)",
+    "title": "Inkonzo Yokuvulwa Kwe ndlu",
     "category": "Liturgy",
     "content": [
       {
@@ -2840,7 +2848,7 @@
   },
   {
     "page": 90,
-    "title": "Izahluko (Index)",
+    "title": "Izahluko Zamaculo",
     "category": "Index",
     "content": [
       {
@@ -2850,25 +2858,25 @@
       {
         "type": "toc-row",
         "text": "Angobukhulu Buka-Thixo",
-        "target": "1-21",
+        "target": "1-22",
         "isHymn": true
       },
       {
         "type": "toc-row",
         "text": "Ango Yesu",
-        "target": "22-67",
+        "target": "23-68",
         "isHymn": true
       },
       {
         "type": "toc-row",
         "text": "Angomoya Oyingcwele",
-        "target": "68",
+        "target": "69",
         "isHymn": true
       },
       {
         "type": "toc-row",
         "text": "Angelizwi Nebandla Lika Thixo",
-        "target": "69-72",
+        "target": "70-72",
         "isHymn": true
       },
       {
@@ -2880,61 +2888,61 @@
       {
         "type": "toc-row",
         "text": "Awamakholwa",
-        "target": "91-101",
+        "target": "91-102",
         "isHymn": true
       },
       {
         "type": "toc-row",
         "text": "Isabatha",
-        "target": "102-108",
+        "target": "103-109",
         "isHymn": true
       },
       {
         "type": "toc-row",
         "text": "Umthandazo Nenguquko",
-        "target": "109-153",
+        "target": "110-153",
         "isHymn": true
       },
       {
         "type": "toc-row",
         "text": "Awomthendeleko Wenkosi",
-        "target": "154-158",
+        "target": "154-159",
         "isHymn": true
       },
       {
         "type": "toc-row",
         "text": "Awo Bhapathizesho Nozaliso",
-        "target": "159-161",
+        "target": "160-161",
         "isHymn": true
       },
       {
         "type": "toc-row",
         "text": "Owokuvula Inkonzo",
-        "target": "162-164",
+        "target": "162-166",
         "isHymn": true
       },
       {
         "type": "toc-row",
         "text": "Ele Convention Elama-Nina",
-        "target": "165",
+        "target": "167",
         "isHymn": true
       },
       {
         "type": "toc-row",
         "text": "Awokufa Nomgwebo",
-        "target": "166-169",
+        "target": "168-171",
         "isHymn": true
       },
       {
         "type": "toc-row",
         "text": "Angezulu",
-        "target": "170-184",
+        "target": "172-181",
         "isHymn": true
       },
       {
         "type": "toc-row",
         "text": "Awamaxesha Athile",
-        "target": "185-194",
+        "target": "182-194",
         "isHymn": true
       }
     ]
@@ -3879,73 +3887,6 @@
           "Ma ndiphumle ngaWe nkosi",
           "Undithamsanqele. Amen."
         ]
-      },
-      {
-        "type": "heading-2",
-        "text": "<div class='hymn-header'><span class='hymn-number'>16</span><span class='hymn-meter'>8 6 8 6</span></div>"
-      },
-      {
-        "type": "stanza",
-        "lines": [
-          "BULELANI kuYehova,",
-          "kuba elungile;",
-          "kuba ububele baKhe",
-          "bubobaphakade."
-        ]
-      },
-      {
-        "type": "stanza",
-        "lines": [
-          "2. M' atsho amaSirayeli.",
-          "Iindlu zawo zonke,",
-          "Athi, ububele baKhe",
-          "bubobaphakade."
-        ]
-      },
-      {
-        "type": "stanza",
-        "lines": [
-          "3. Ndamemeza kuYehova,",
-          "Ndandisengxingweni;",
-          "Wandinceda wandibeka",
-          "Endaweni ebanzi."
-        ]
-      },
-      {
-        "type": "stanza",
-        "lines": [
-          "4. Ingecala lam iNkosi,",
-          "Andisokoyika:",
-          "Ingasuka ithi ni na",
-          "Le nto umntu kumi?"
-        ]
-      },
-      {
-        "type": "stanza",
-        "lines": [
-          "5. Ingecala Lam iNkosi.",
-          "Iya kundinceda:",
-          "Indincede ngokumnandi",
-          "kwabandithiyayo."
-        ]
-      },
-      {
-        "type": "stanza",
-        "lines": [
-          "6. Ukuthemba uYehova",
-          "Nokuphepha ngaYe.",
-          "Kuko okulungileyo;",
-          "Kungathenjwa bantu."
-        ]
-      },
-      {
-        "type": "stanza",
-        "lines": [
-          "7. Ma ndisinde ngawe nkosi",
-          "Undisikelele!",
-          "Ma ndiphumle ngaWe nkosi",
-          "Undithamsanqele. Amen."
-        ]
       }
     ]
   },
@@ -3957,64 +3898,6 @@
       17
     ],
     "content": [
-      {
-        "type": "heading-2",
-        "text": "<div class='hymn-header'><span class='hymn-number'>17</span><span class='hymn-meter'>7 7 7 7</span></div>"
-      },
-      {
-        "type": "stanza",
-        "lines": [
-          "ZINGWEVU dumisani",
-          "U Thixo weminyaka",
-          "Bafazi dumisani",
-          "U Thixo waphakade."
-        ]
-      },
-      {
-        "type": "stanza",
-        "lines": [
-          "2. Zintombi dumisani",
-          "Owakudal' u-Thixo",
-          "Bongani madodana",
-          "Owemikhosi u-Thixo."
-        ]
-      },
-      {
-        "type": "stanza",
-        "lines": [
-          "3. Nani nyanga, nelanga",
-          "Mdumiseni u-Mdali",
-          "Nani zilo zehlathi",
-          "Mbongeni nonke nani."
-        ]
-      },
-      {
-        "type": "stanza",
-        "lines": [
-          "4. Zihadi nemililo",
-          "Mudumiseni nani,",
-          "Zinduli, nezilwandle",
-          "Bongan' igama lakhe."
-        ]
-      },
-      {
-        "type": "stanza",
-        "lines": [
-          "5. Zingqele nemimoya",
-          "Vuthuzani ngamandla",
-          "Nani mudumiseni",
-          "Owadal' into zonke."
-        ]
-      },
-      {
-        "type": "stanza",
-        "lines": [
-          "6. Haleluya Ameni",
-          "Udumo ezulwini",
-          "Haleluya ku Yise",
-          "Ofanelwe ludumo. Amen."
-        ]
-      },
       {
         "type": "heading-2",
         "text": "<div class='hymn-header'><span class='hymn-number'>17</span><span class='hymn-meter'>7 7 7 7</span></div>"
@@ -4160,59 +4043,6 @@
           "Nemikhosi yaphezulu,",
           "Yise, Nyana nawe Moya. Amen."
         ]
-      },
-      {
-        "type": "heading-2",
-        "text": "<div class='hymn-header'><span class='hymn-number'>19</span><span class='hymn-meter'>8 8 8 8</span></div>"
-      },
-      {
-        "type": "rubric",
-        "text": "All people that on earth do dwell."
-      },
-      {
-        "type": "stanza",
-        "lines": [
-          "NINA zizwe qubudani",
-          "Phambi kwakhe u-Yehova.",
-          "Nguye yedwa ongu-Thixo.",
-          "Uyadala abhubhise."
-        ]
-      },
-      {
-        "type": "stanza",
-        "lines": [
-          "2. Wasidala yena yedwa",
-          "Ngalo uthuli lomhlaba,",
-          "Wathi sesilahlekile",
-          "Wasibuyisela kuye."
-        ]
-      },
-      {
-        "type": "stanza",
-        "lines": [
-          "3. Soza ngoko simbulele,",
-          "Koviwa nasezulwini;",
-          "Nelwimi zonke zomhlaba",
-          "Ziyakwenza indumiso."
-        ]
-      },
-      {
-        "type": "stanza",
-        "lines": [
-          "4. Umthetho wakho ubanzi,",
-          "Nothando lwakho lunzulu;",
-          "Yohlal' inyaniso yakho,",
-          "Kude kus' ekupheleni."
-        ]
-      },
-      {
-        "type": "stanza",
-        "lines": [
-          "5. Simbonga ngentsikelelo,",
-          "Nazo zonke izidalwa;",
-          "Nemikhosi yaphezulu,",
-          "Yise, Nyana nawe Moya. Amen."
-        ]
       }
     ]
   },
@@ -4272,55 +4102,6 @@
           "Kuyo lo Nkosi u-Yesu,",
           "Lowo wabingwayo. Amen."
         ]
-      },
-      {
-        "type": "heading-2",
-        "text": "<div class='hymn-header'><span class='hymn-number'>20</span><span class='hymn-meter'>6 6 8 6</span></div>"
-      },
-      {
-        "type": "stanza",
-        "lines": [
-          "UBUBELE bakho.",
-          "Bungumangaliso;",
-          "Thixo ongunaphakade,",
-          "Bungumthombo bona."
-        ]
-      },
-      {
-        "type": "stanza",
-        "lines": [
-          "2. Bumpompozelela,",
-          "Kumachibi onke;",
-          "Onke azaliswa bubo,",
-          "Ngal' ufefe lwakho."
-        ]
-      },
-      {
-        "type": "stanza",
-        "lines": [
-          "3. Yes' ufefe lwakho,",
-          "Luliculo lami;",
-          "Iculo lomphefumlo wam.",
-          "Uculayo ngalo."
-        ]
-      },
-      {
-        "type": "stanza",
-        "lines": [
-          "4. Lona nje ngemitha.",
-          "Imitha yelanga;",
-          "Ekubaleleni kwalo,",
-          "Ngalo ndiyavuswa."
-        ]
-      },
-      {
-        "type": "stanza",
-        "lines": [
-          "5. Banyulwa be Nkosi,",
-          "Khangelani kuyo:",
-          "Kuyo lo Nkosi u-Yesu,",
-          "Lowo wabingwayo. Amen."
-        ]
       }
     ]
   },
@@ -4332,64 +4113,6 @@
       21
     ],
     "content": [
-      {
-        "type": "heading-2",
-        "text": "<div class='hymn-header'><span class='hymn-number'>21</span><span class='hymn-meter'>8 8 8 8</span></div>"
-      },
-      {
-        "type": "stanza",
-        "lines": [
-          "INKAZIMLO za-mazulu,",
-          "Zibonakala phezulu;",
-          "Zinqina ubukho bakho.",
-          "Kwano bungcwalisa bakho."
-        ]
-      },
-      {
-        "type": "stanza",
-        "lines": [
-          "2. Into zonke zihleli nje,",
-          "Zadalwa nge Gama lakho,",
-          "Wena Msindisi woluntu,",
-          "Wena Nyana waphakade."
-        ]
-      },
-      {
-        "type": "stanza",
-        "lines": [
-          "3. Ezulwini imikhosi",
-          "Izukisa wena Yesu;",
-          "Emhlabeni udunyiswa",
-          "Ngabo bonk'abakholwayo."
-        ]
-      },
-      {
-        "type": "stanza",
-        "lines": [
-          "4. Ewe sitsho kuwe Moya,",
-          "Wena siqu sesithathu,",
-          "Ngcwele yazo zonk' iNgcwele.",
-          "Yamkel 'indumiso zethu."
-        ]
-      },
-      {
-        "type": "stanza",
-        "lines": [
-          "5. Sikuthuma wena khwezi",
-          "Apho singena kufika;",
-          "Khanyisa ubuso bakho",
-          "Phezu kwazo zonk' intlanga."
-        ]
-      },
-      {
-        "type": "stanza",
-        "lines": [
-          "6. Haleluya, ezulwini,",
-          "Haleluya emhlabeni,",
-          "Yamkel' izicelo zethu",
-          "Wena, ongu Simakade. Amen."
-        ]
-      },
       {
         "type": "heading-2",
         "text": "<div class='hymn-header'><span class='hymn-number'>21</span><span class='hymn-meter'>8 8 8 8</span></div>"
@@ -4519,10 +4242,6 @@
           "Kusendlini ka Yehova",
           "Apho ndiphilayo. Amen."
         ]
-      },
-      {
-        "type": "heading-3",
-        "text": "II. ANGO-YESU."
       }
     ]
   },
@@ -4534,6 +4253,10 @@
       23
     ],
     "content": [
+      {
+        "type": "heading-3",
+        "text": "II. ANGO-YESU."
+      },
       {
         "type": "heading-2",
         "text": "<div class='hymn-header'><span class='hymn-number'>23</span><span class='hymn-meter'>7 7 7 7</span></div>"
@@ -5411,7 +5134,7 @@
       {
         "type": "stanza",
         "lines": [
-          "WARAZULWA ngenxa yami.",
+          "WAKRAZULWA ngenxa yami.",
           "Liwa laphakade!",
           "Kuze ndizifihle Kuwe.",
           "Nxeba lika-Yesu!"
@@ -5447,7 +5170,7 @@
       {
         "type": "stanza",
         "lines": [
-          "5. Warazulwa ngenza yami,",
+          "5. Wakrazulwa ngenza yami,",
           "Liwa laphakade!",
           "Kuze ndizifihle Kuwe,",
           "Nxeba lika-Yesu! Amen."
@@ -7319,10 +7042,6 @@
           "Yiba nodumo, kumazwe, ngamazwe,",
           "Yiba nodumo, kwizizwe ngezizwe. Amen."
         ]
-      },
-      {
-        "type": "heading-3",
-        "text": "III. ANGOMOYA OYINGCWELE."
       }
     ]
   },
@@ -7334,6 +7053,10 @@
       69
     ],
     "content": [
+      {
+        "type": "heading-3",
+        "text": "III. ANGOMOYA OYINGCWELE."
+      },
       {
         "type": "heading-2",
         "text": "<div class='hymn-header'><span class='hymn-number'>69</span><span class='hymn-meter'>8 8 8 8 8 8</span></div>"
@@ -7370,10 +7093,6 @@
           "Iz' ingabi nakuphikwa",
           "Yonk' imilo kwa nemikwa. Amen."
         ]
-      },
-      {
-        "type": "heading-3",
-        "text": "IV. ANGELIZWI NEBANDLA LIKA THIXO."
       }
     ]
   },
@@ -7385,6 +7104,10 @@
       70
     ],
     "content": [
+      {
+        "type": "heading-3",
+        "text": "IV. ANGELIZWI NEBANDLA LIKA THIXO."
+      },
       {
         "type": "heading-2",
         "text": "<div class='hymn-header'><span class='hymn-number'>70</span><span class='hymn-meter'>12 14 14</span></div>"
@@ -7634,6 +7357,10 @@
     ],
     "content": [
       {
+        "type": "heading-3",
+        "text": "V. ANGOBIZO LWE-GOSPILE."
+      },
+      {
         "type": "heading-2",
         "text": "<div class='hymn-header'><span class='hymn-number'>73</span><span class='hymn-meter'>8 6 8 6</span></div>"
       },
@@ -7681,10 +7408,6 @@
           "Zikhangele ku-Msindisi",
           "Zimamkele yena. Amen."
         ]
-      },
-      {
-        "type": "heading-3",
-        "text": "V. ANGOBIZO LWE-GOSPILE."
       }
     ]
   },
@@ -8789,6 +8512,10 @@
     ],
     "content": [
       {
+        "type": "heading-3",
+        "text": "VI. AWAMAKHOLWA."
+      },
+      {
         "type": "heading-2",
         "text": "<div class='hymn-header'><span class='hymn-number'>91</span><span class='hymn-meter'>6 6 6 6 6 6 6 6</span></div>"
       },
@@ -8830,10 +8557,6 @@
           "Unobuhle bami,",
           "Unophumlo lwami. Amen."
         ]
-      },
-      {
-        "type": "heading-3",
-        "text": "VI. AWAMAKHOLWA."
       }
     ]
   },
@@ -9458,10 +9181,6 @@
           "Zifundiswe, zikhuliswe,",
           "Kuyo yonk' inkonzo yaKho. Amen."
         ]
-      },
-      {
-        "type": "heading-1",
-        "text": "VII. ISABATHA."
       }
     ]
   },
@@ -9473,6 +9192,10 @@
       103
     ],
     "content": [
+      {
+        "type": "heading-1",
+        "text": "VII. ISABATHA."
+      },
       {
         "type": "heading-2",
         "text": "<div class='hymn-header'><span class='hymn-number'>103</span><span class='hymn-meter'></span></div>"
@@ -9893,10 +9616,6 @@
           "Yibone yonk' i-Afrika",
           "Nayo ngalemini yakho. Amen."
         ]
-      },
-      {
-        "type": "heading-3",
-        "text": "VIII. UMTHANDAZO NENGUQUKO."
       }
     ]
   },
@@ -9908,6 +9627,10 @@
       110
     ],
     "content": [
+      {
+        "type": "heading-3",
+        "text": "VIII. UMTHANDAZO NENGUQUKO."
+      },
       {
         "type": "heading-2",
         "text": "<div class='hymn-header'><span class='hymn-number'>110</span><span class='hymn-meter'>8 8 8 8</span></div>"
@@ -10816,7 +10539,7 @@
       {
         "type": "stanza",
         "lines": [
-          "5. Kuba namhla ndenjenje, nje,",
+          "5. Kuba namhla ndinjenje, nje,",
           "Ndililolo apha;",
           "Ndandisiya nezihlwele,",
           "Kuyo indlu yakho."
@@ -12072,7 +11795,7 @@
         "lines": [
           "2. Maxa uzityila",
           "Kwaba bantu bakho",
-          "Bona wena Mfeli wam",
+          "Bona Wena Mfeli wam",
           "Uz' undikhumbule."
         ]
       },
@@ -12654,6 +12377,10 @@
     ],
     "content": [
       {
+        "type": "heading-3",
+        "text": "IX. AWOMTHENDELEKO WENKOSI."
+      },
+      {
         "type": "heading-2",
         "text": "<div class='hymn-header'><span class='hymn-number'>154</span><span class='hymn-meter'>11 10 11 10</span></div>"
       },
@@ -12692,10 +12419,6 @@
           "Kulomlambo wawuwela ngenxa yami",
           "Ndlela yami, sibane sezulu. Amen."
         ]
-      },
-      {
-        "type": "heading-3",
-        "text": "IX. AWOMTHENDELEKO WENKOSI."
       }
     ]
   },
@@ -12735,7 +12458,7 @@
           "3. Sithabath' isonka Yesu,",
           "Sikhangele kuwe;",
           "Sithabathe sidle sona,",
-          "Sikhumbule wena."
+          "Sikhumbule Wena."
         ]
       },
       {
@@ -12744,7 +12467,7 @@
           "4. Siyaphatha nalendebe,",
           "Sithembe kuwe;",
           "Siyasela kuyo sonke,",
-          "Sikhumbule wena. Amen."
+          "Sikhumbule Wena. Amen."
         ]
       }
     ]
@@ -12925,7 +12648,7 @@
         "lines": [
           "NKOSI namhla sikhumbula",
           "Okukufa kwakho",
-          "Wakwenzayo wena wedwa",
+          "Wakwenzayo Wena wedwa",
           "Xan' usithengayo."
         ]
       },
@@ -12989,6 +12712,10 @@
     ],
     "content": [
       {
+        "type": "heading-3",
+        "text": "X. Awo Bhapathizesho Nozaliso."
+      },
+      {
         "type": "heading-2",
         "text": "<div class='hymn-header'><span class='hymn-number'>160</span><span class='hymn-meter'>6 6 8 6</span></div>"
       },
@@ -13004,7 +12731,7 @@
       {
         "type": "stanza",
         "lines": [
-          "2. Wathi wena Nkosi",
+          "2. Wathi Wena Nkosi",
           "Masibavumele",
           "Abantwana beze kuwe",
           "Ubasikelele."
@@ -13024,7 +12751,7 @@
         "lines": [
           "4. Zakuphehlelelwa",
           "Ngamanz' abonwayo",
-          "Zuziphehlelele wena",
+          "Zuziphehlelele Wena",
           "Nango Moya wakho."
         ]
       },
@@ -13335,7 +13062,7 @@
       {
         "type": "stanza",
         "lines": [
-          "SIBONGOZA wena Yesu,",
+          "SIBONGOZA Wena Yesu,",
           "Xa sihlangeneyo;",
           "Zusikhanyisele thina,",
           "Xa singaqondiyo."
@@ -13385,10 +13112,6 @@
           "Kuphiliswe lomsebenzi,",
           "Wamadinga akho. Amen."
         ]
-      },
-      {
-        "type": "heading-3",
-        "text": "ELE CONVENTION.<br>ELAMA-NINA."
       }
     ]
   },
@@ -13400,6 +13123,10 @@
       167
     ],
     "content": [
+      {
+        "type": "heading-3",
+        "text": "ELE CONVENTION.<br>ELAMA-NINA."
+      },
       {
         "type": "heading-2",
         "text": "<div class='hymn-header'><span class='hymn-number'>167</span><span class='hymn-meter'>11 11 11 11</span></div>"
@@ -13484,10 +13211,6 @@
           "Ngayo i-Afrika boyibuyisa,",
           "Nkosi, wusikelel' u-Mkhos' ozayo. Amen."
         ]
-      },
-      {
-        "type": "heading-3",
-        "text": "XII. AWOKUFA NOMGWEBO."
       }
     ]
   },
@@ -13499,6 +13222,10 @@
       168
     ],
     "content": [
+      {
+        "type": "heading-3",
+        "text": "XII. AWOKUFA NOMGWEBO."
+      },
       {
         "type": "heading-2",
         "text": "<div class='hymn-header'><span class='hymn-number'>168</span><span class='hymn-meter'>8 8 8 8</span></div>"
@@ -13716,10 +13443,6 @@
           "Baleka uye ku-Thixo",
           "Unenceba wokwamkela. Amen."
         ]
-      },
-      {
-        "type": "heading-3",
-        "text": "XIII. ANGEZULU."
       }
     ]
   },
@@ -13731,6 +13454,10 @@
       172
     ],
     "content": [
+      {
+        "type": "heading-3",
+        "text": "XIII. ANGEZULU."
+      },
       {
         "type": "heading-2",
         "text": "<div class='hymn-header'><span class='hymn-number'>172</span><span class='hymn-meter'>7 6 7 6 7 6 7 6</span></div>"
@@ -14233,7 +13960,7 @@
         "type": "stanza",
         "lines": [
           "2. Ndasiva eso sandi,",
-          "Sabadala bezulu;",
+          "Sabadala beZulu;",
           "Kubongwa esimanga;",
           "Zabhabham' ingelosi,",
           "Ziphete izi thsaba;",
@@ -14368,6 +14095,10 @@
       182
     ],
     "content": [
+      {
+        "type": "heading-3",
+        "text": "XVI. AWAMAXESHA ATHILE."
+      },
       {
         "type": "heading-2",
         "text": "<div class='hymn-header'><span class='hymn-number'>182</span><span class='hymn-meter'>7 7 7 7 7 7 7 7</span></div>"
@@ -14690,10 +14421,6 @@
           "Side size Kuwe, Bawo,",
           "Sihlangulwe kongendawo. Amen."
         ]
-      },
-      {
-        "type": "heading-3",
-        "text": "XVI. AWAMAXESHA ATHILE."
       },
       {
         "type": "rubric",
@@ -15169,7 +14896,7 @@
     ]
   },
   {
-    "page": 288,
+    "page": 285,
     "title": "Izalathiso (A-E)",
     "category": "Index",
     "content": [
@@ -16566,7 +16293,7 @@
       },
       {
         "type": "toc-row",
-        "text": "Warazulwa ngenxa yami",
+        "text": "Wakrazulwa ngenxa yami",
         "author": "W. S. Davis",
         "target": 37,
         "isHymn": true,
