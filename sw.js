@@ -1,6 +1,6 @@
-const CACHE_NAME = 'amec-hymnal-v17.1';
-const STATIC_CACHE = 'amec-hymnal-static-v17.1';
-const DATA_CACHE = 'amec-hymnal-data-v17.1';
+const CACHE_NAME = 'amec-hymnal-v1';
+const STATIC_CACHE = 'amec-hymnal-static-v1';
+const DATA_CACHE = 'amec-hymnal-data-v1';
 
 const STATIC_ASSETS = [
     './',
@@ -16,7 +16,6 @@ const STATIC_ASSETS = [
 ];
 
 const DATA_ASSETS = [
-    './hymnal_data.json',
     './hymnal_xh.json',
     './hymnal_en.json'
 ];

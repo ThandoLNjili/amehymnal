@@ -882,7 +882,7 @@ const FOOTER_SHORTCUTS = {
     leftLabel: "Imibhedesho",
     leftTarget: 3,
     rightLabel: "Amaculo",
-    rightTarget: 288
+    rightTarget: 285
   },
   en: {
     leftLabel: "Liturgy",
