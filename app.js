@@ -4,9 +4,9 @@ let currentPage = 1;
 let maxPage = 0;
 
 const LANGUAGES = [
-    { code: "af", label: "Afrikaans" },
+    // { code: "af", label: "Afrikaans" },
     { code: "en", label: "English" },
-    { code: "st", label: "Sesotho" },
+    // { code: "st", label: "Sesotho" },
     { code: "xh", label: "IsiXhosa" }
 ].sort((a, b) => a.label.localeCompare(b.label));
 
