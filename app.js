@@ -1,5 +1,5 @@
 // Initialization & State
-const APP_VERSION = 'v1.1.2';
+const APP_VERSION = 'v1.2.0';
 let hymnalData = [];
 let currentPage = 1;
 let maxPage = 0;
@@ -167,10 +167,36 @@ function closeSearch() {
     document.getElementById('search-input').value = '';
 }
 
+// Recently viewed — per language, max 5 entries
+const MAX_RECENT = 5;
+
+function saveRecentPage(pageNum) {
+    const pageData = hymnalData.find(p => p.page === pageNum);
+    if (!pageData) return;
+    const lang = localStorage.getItem(LANGUAGE_KEY) || 'en';
+    const key = `amec-hymnal-recent-${lang}`;
+    const recent = getRecentPages();
+    const filtered = recent.filter(r => r.page !== pageNum);
+    filtered.unshift({ page: pageNum, title: pageData.title });
+    if (filtered.length > MAX_RECENT) filtered.length = MAX_RECENT;
+    localStorage.setItem(key, JSON.stringify(filtered));
+}
+
+function getRecentPages() {
+    const lang = localStorage.getItem(LANGUAGE_KEY) || 'en';
+    const key = `amec-hymnal-recent-${lang}`;
+    try {
+        return JSON.parse(localStorage.getItem(key) || '[]');
+    } catch {
+        return [];
+    }
+}
+
 // helper to jump to specific sections
 function goToPage(pageNum) {
     currentPage = pageNum;
     localStorage.setItem('amec-hymnal-current-page', pageNum.toString());
+    saveRecentPage(pageNum);
     renderPage(currentPage);
     // Smooth scroll to top
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -311,6 +337,13 @@ function debounceSearch() {
 // Live Search Listener with debouncing
 searchInput.addEventListener('input', debounceSearch);
 
+// Show recently viewed when focusing an empty search box
+searchInput.addEventListener('focus', () => {
+    if (!searchInput.value.trim()) {
+        performSearch();
+    }
+});
+
 // Also search on Enter key
 searchInput.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
@@ -322,10 +355,27 @@ searchInput.addEventListener('keydown', (e) => {
 // Main search function
 function performSearch() {
     const query = searchInput.value.toLowerCase().trim();
+    const escapedQuery = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     resultsContainer.innerHTML = ''; // Clear previous
 
     if (!query) {
-        resultsContainer.classList.add('hidden');
+        const recent = getRecentPages();
+        if (recent.length > 0) {
+            const label = document.createElement('div');
+            label.className = 'search-option';
+            label.style.cssText = 'cursor:default; color:var(--rubric-color); font-size:0.85em; font-style:italic; pointer-events:none;';
+            label.textContent = 'Recently viewed';
+            resultsContainer.appendChild(label);
+            recent.forEach(r => {
+                createSearchOption(`Page ${r.page}`, r.title, () => {
+                    goToPage(r.page);
+                    closeSearch();
+                });
+            });
+            resultsContainer.classList.remove('hidden');
+        } else {
+            resultsContainer.classList.add('hidden');
+        }
         return;
     }
 
@@ -374,7 +424,7 @@ function performSearch() {
                 matchFoundOnPage = true;
                 matchScore = 10; // High score for title matches
                 // Highlight query in title
-                mainLabel = page.title.replace(new RegExp(`(${query})`, 'gi'), '<span class="search-highlight">$1</span>');
+                mainLabel = page.title.replace(new RegExp(`(${escapedQuery})`, 'gi'), '<span class="search-highlight">$1</span>');
                 snippet = `Page ${page.page}`;
             }
 
@@ -391,7 +441,7 @@ function performSearch() {
                                 matchScore = 5; // Medium score for lyric matches
 
                                 // Create a neat snippet with more context
-                                const highlightedLine = line.replace(new RegExp(`(${query})`, 'gi'), '<span class="search-highlight">$1</span>');
+                                const highlightedLine = line.replace(new RegExp(`(${escapedQuery})`, 'gi'), '<span class="search-highlight">$1</span>');
                                 snippet = `"...${highlightedLine}..."`;
 
                                 // Try to identify which Hymn this is
@@ -411,7 +461,7 @@ function performSearch() {
                     ) {
                         matchFoundOnPage = true;
                         matchScore = 6; // Medium score for heading matches
-                        const highlightedHeading = block.text.replace(new RegExp(`(${query})`, 'gi'), '<span class="search-highlight">$1</span>');
+                        const highlightedHeading = block.text.replace(new RegExp(`(${escapedQuery})`, 'gi'), '<span class="search-highlight">$1</span>');
                         mainLabel = highlightedHeading;
                         snippet = `Liturgy Heading (Page ${page.page})`;
                     }
@@ -432,7 +482,7 @@ function performSearch() {
                         if (block.text.toLowerCase().includes(query)) {
                             matchFoundOnPage = true;
                             matchScore = 8; // High score for TOC matches
-                            mainLabel = block.text.replace(new RegExp(`(${query})`, 'gi'), '<span class="search-highlight">$1</span>');
+                            mainLabel = block.text.replace(new RegExp(`(${escapedQuery})`, 'gi'), '<span class="search-highlight">$1</span>');
                             snippet = `Index Entry (Goes to Page ${block.target})`;
                         }
                         // Check author name
@@ -440,7 +490,7 @@ function performSearch() {
                             matchFoundOnPage = true;
                             matchScore = 7; // Good score for author matches
                             mainLabel = block.text;
-                            const highlightedAuthor = block.author.replace(new RegExp(`(${query})`, 'gi'), '<span class="search-highlight">$1</span>');
+                            const highlightedAuthor = block.author.replace(new RegExp(`(${escapedQuery})`, 'gi'), '<span class="search-highlight">$1</span>');
                             snippet = `By ${highlightedAuthor} (Page ${block.target})`;
                         }
                     }
@@ -449,7 +499,7 @@ function performSearch() {
                         matchFoundOnPage = true;
                         matchScore = 6; // Medium score for rubric matches
                         mainLabel = page.title;
-                        const highlightedRubric = block.text.replace(new RegExp(`(${query})`, 'gi'), '<span class="search-highlight">$1</span>');
+                        const highlightedRubric = block.text.replace(new RegExp(`(${escapedQuery})`, 'gi'), '<span class="search-highlight">$1</span>');
                         snippet = `Rubric: ${highlightedRubric}`;
                     }
                     else if (
@@ -457,7 +507,7 @@ function performSearch() {
                     ) {
                         matchFoundOnPage = true;
                         matchScore = 5; // Adjust score as needed
-                        const highlightedText = block.text.replace(new RegExp(`(${query})`, 'gi'), '<span class="search-highlight">$1</span>');
+                        const highlightedText = block.text.replace(new RegExp(`(${escapedQuery})`, 'gi'), '<span class="search-highlight">$1</span>');
                         mainLabel = page.title;
                         snippet = block.number
                             ? `(${block.number}) "${highlightedText}"`
@@ -476,6 +526,11 @@ function performSearch() {
             }
         }
     }
+
+    // Sort results by score (highest first)
+    const sortedResults = Array.from(resultsContainer.querySelectorAll('.search-option'));
+    sortedResults.sort((a, b) => parseInt(b.dataset.score || 0) - parseInt(a.dataset.score || 0));
+    sortedResults.forEach(el => resultsContainer.appendChild(el));
 
     if (resultsCount === 0) {
         resultsContainer.innerHTML = '<div class="search-option" style="cursor:default; color:#888;">No results found</div>';
