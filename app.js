@@ -1,4 +1,5 @@
 // Initialization & State
+const APP_VERSION = 'v1.1.0';
 let hymnalData = [];
 let currentPage = 1;
 let maxPage = 0;
@@ -929,3 +930,40 @@ const FOOTER_SHORTCUTS = {
 // Load preferences on app start
 loadThemePreference();
 loadFontPreference();
+
+// About modal
+document.addEventListener('DOMContentLoaded', function setupAboutModal() {
+    const btn = document.getElementById('about-toggle');
+    const modal = document.getElementById('about-modal');
+    const closeBtn = document.getElementById('about-modal-close');
+
+    if (!btn || !modal) return;
+
+    function openModal() {
+        modal.style.display = 'flex';
+        closeBtn.focus();
+        setMenuOpen(false);
+    }
+
+    function closeModal() {
+        modal.style.display = 'none';
+        btn.focus();
+    }
+
+    btn.addEventListener('click', openModal);
+    closeBtn.addEventListener('click', closeModal);
+
+    // Close when clicking the backdrop
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+    });
+
+    // Close with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.style.display !== 'none') closeModal();
+    });
+
+    // Populate version
+    const versionEl = document.getElementById('app-version');
+    if (versionEl) versionEl.textContent = APP_VERSION;
+});
