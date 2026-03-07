@@ -1,5 +1,5 @@
 // Initialization & State
-const APP_VERSION = 'v1.1.0';
+const APP_VERSION = 'v1.1.2';
 let hymnalData = [];
 let currentPage = 1;
 let maxPage = 0;
@@ -930,6 +930,35 @@ const FOOTER_SHORTCUTS = {
 // Load preferences on app start
 loadThemePreference();
 loadFontPreference();
+
+// PWA Install prompt
+(function setupInstallPrompt() {
+    let deferredPrompt = null;
+    const banner = document.getElementById('install-banner');
+    const installBtn = document.getElementById('install-button');
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+        if (banner) banner.style.display = 'block';
+    });
+
+    if (installBtn) {
+        installBtn.addEventListener('click', async () => {
+            if (!deferredPrompt) return;
+            deferredPrompt.prompt();
+            const { outcome } = await deferredPrompt.userChoice;
+            deferredPrompt = null;
+            if (banner) banner.style.display = 'none';
+        });
+    }
+
+    // Hide banner once installed
+    window.addEventListener('appinstalled', () => {
+        if (banner) banner.style.display = 'none';
+        deferredPrompt = null;
+    });
+}());
 
 // About modal
 document.addEventListener('DOMContentLoaded', function setupAboutModal() {
