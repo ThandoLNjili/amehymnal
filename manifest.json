@@ -1,11 +1,11 @@
 {
   "name": "AMEC Word Hymnal",
-  "short_name": "AMEC Hymnal",
+  "short_name": "AME Hymnal",
   "description": "A comprehensive offline-capable hymn reader for AMEC liturgy and worship",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#2b5a88",
+  "theme_color": "#ffffff",
   "orientation": "portrait",
   "scope": "./",
   "categories": ["books", "lifestyle", "music"],

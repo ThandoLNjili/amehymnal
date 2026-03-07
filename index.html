@@ -12,7 +12,7 @@
     <!-- iOS PWA installation meta tags -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="apple-mobile-web-app-title" content="AMEC Hymnal">
+    <meta name="apple-mobile-web-app-title" content="AME Hymnal">
 </head>
 
 <body>
@@ -20,7 +20,7 @@
     <nav class="navbar">
         <div class="nav-left">
             <img src="icons/amec-logo-192.png" alt="AMEC Logo" class="amec-logo">
-            <span class="logo">AMEC Hymnal</span>
+            <span class="logo">AME Hymnal</span>
         </div>
         <div class="nav-right">
             <button id="font-toggle" aria-label="Increase Font Size">A+</button>
@@ -31,6 +31,7 @@
 
             <div id="nav-controls" class="nav-controls" aria-label="Menu">
                 <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+                <button id="about-toggle" aria-label="About">About</button>
 
                 <div class="language-select-wrapper">
                     <select id="language-select" aria-label="Select hymnal Language">
@@ -83,6 +84,29 @@
             <script src="app.js"></script>
         </div>
     </main>
+
+    <!-- About / Contact Modal -->
+    <div id="about-modal" class="about-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="about-modal-title" style="display:none;">
+        <div class="about-modal">
+            <button class="about-modal-close" id="about-modal-close" aria-label="Close">✕</button>
+            <h2 id="about-modal-title">About This App</h2>
+            <p>This is the <strong>AMEC Word Hymnal</strong> — a digital hymnal for the African Methodist Episcopal Church.</p>
+            <hr class="about-divider">
+            <h3>Contact</h3>
+            <p>For corrections, suggestions, or any issues, please reach out:</p>
+            <ul class="about-contact-list">
+                <li>
+                    <span class="contact-label">✉️ Email</span>
+                    <a href="mailto:thandolnjili@gmail.com">thandolnjili@gmail.com</a>
+                </li>
+                <li>
+                    <span class="contact-label">💬 WhatsApp</span>
+                    <a href="https://wa.me/27662146287" target="_blank" rel="noopener noreferrer">+27 66 214 6287</a>
+                </li>
+            </ul>
+            <p class="about-version">Version <span id="app-version">—</span></p>
+        </div>
+    </div>
 
 </body>
 
